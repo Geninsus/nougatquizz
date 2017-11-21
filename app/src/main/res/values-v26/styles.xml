@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="TitleTheme">
+        <item name="color">@color/colorTextePrincipal</item>
+        <item name="android:font">@fonts/Roboto-Black.ttf</item>
+    </style>
+</resources>

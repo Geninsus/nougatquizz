@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorBluePrincipal"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <RelativeLayout
+        android:id="@+id/relativeLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="0dp"
+        android:layout_marginTop="0dp" >
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/titlePage"
+        android:layout_alignParentLeft="false"
+        android:layout_marginTop="@dimen/titleMarginTop"
+        android:layout_centerHorizontal="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Instructions"
+        android:textStyle="bold|italic"
+        android:textSize="@dimen/title"
+        android:textAlignment="center"
+        android:textColor="@color/colorTextePrincipal" />
+
+    <Button
+        android:id="@+id/scoreButton"
+        android:layout_alignParentLeft="true"
+        android:layout_width="@dimen/iconSizeButton"
+        android:layout_height="@dimen/iconSizeButton"
+        android:background="@drawable/cup_yellow"
+        tools:layout_marginLeft="@dimen/iconMargin"
+        tools:layout_marginTop="@dimen/iconMargin"/>
+
+    <Button
+        android:id="@+id/settingsButton"
+        android:layout_alignParentRight="true"
+        android:layout_width="@dimen/iconSizeButton"
+        android:layout_height="@dimen/iconSizeButton"
+        android:background="@drawable/settings_work_tool_yellow"
+        tools:layout_marginRight="@dimen/iconMargin"
+        tools:layout_marginTop="@dimen/iconMargin" />
+
+    <TextView
+        android:id="@+id/instructions"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="91dp"
+        android:paddingRight="50dp"
+        android:paddingLeft="50dp"
+        android:text="@string/instructions"
+        android:textStyle="bold|italic"
+        android:textColor="@color/colorTextePrincipal"
+        android:textAlignment="center"
+        android:textSize="30dp"
+        android:layout_below="@+id/titlePage"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:id="@+id/time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/instructions"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="35dp"
+        android:text="@string/duréeChrono"
+        android:textStyle="bold|italic"
+        android:textColor="@color/colorTextePrincipal"
+        android:textAlignment="center"
+        android:textSize="50dp"/>
+
+    <Button
+        android:id="@+id/button2"
+        android:background="@color/colorTextePrincipal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:height="@dimen/buttonHeight"
+        android:text="J'ai compris"
+        android:textStyle="bold|italic"
+        android:textColor="@color/colorBluePrincipal"
+        android:textAlignment="center"
+        android:textSize="30dp"
+ />
+
+
+</RelativeLayout>
