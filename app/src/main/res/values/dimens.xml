@@ -10,4 +10,5 @@
     <dimen name="buttonHeight">100dp</dimen>
     <dimen name="question">30dp</dimen>
     <dimen name="chrono">25dp</dimen>
+    <dimen name="score">80dp</dimen>
 </resources>

@@ -15,107 +15,89 @@
         android:layout_marginTop="0dp" >
     </RelativeLayout>
 
+
+
     <Button
         android:id="@+id/scoreButton"
-
         android:layout_alignParentLeft="true"
         android:layout_width="@dimen/iconSizeButton"
         android:layout_height="@dimen/iconSizeButton"
+        android:background="@drawable/home_icon"
         tools:layout_marginLeft="@dimen/iconMargin"
-        tools:layout_marginTop="@dimen/iconMargin"
+        tools:layout_marginTop="@dimen/iconMargin"/>
 
-        android:background="@drawable/info"/>
+    <Button
+        android:id="@+id/settingsButton"
+        android:layout_alignParentRight="true"
+        android:layout_width="@dimen/iconSizeButton"
+        android:layout_height="@dimen/iconSizeButton"
+        android:background="@drawable/settings_work_tool_yellow"
+        tools:layout_marginRight="@dimen/iconMargin"
+        tools:layout_marginTop="@dimen/iconMargin" />
 
     <TextView
-        android:id="@+id/titlePage"
-
-        android:layout_alignParentLeft="false"
-        android:layout_marginTop="@dimen/iconMargin"
+        android:id="@+id/score"
+        android:layout_alignBottom="@+id/commentaire"
         android:layout_centerHorizontal="true"
-
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-
-        android:text="Nougat Quizz"
+        android:layout_marginBottom="64dp"
+        android:text="40"
         android:textStyle="bold|italic"
-        android:textSize="@dimen/title"
+        android:textSize="@dimen/score"
+        android:textAlignment="center"
+        android:textColor="@color/colorTextePrincipal"/>
+
+    <TextView
+        android:id="@+id/commentaire"
+        android:layout_marginTop="200dp"
+        android:layout_centerHorizontal="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Commentaire score"
+        android:textStyle="bold|italic"
+        android:textSize="@dimen/question"
         android:textAlignment="center"
         android:textColor="@color/colorTextePrincipal" />
 
 
-    <Button
-        android:id="@+id/settingsButton"
 
-        android:layout_alignParentRight="true"
-        android:layout_width="@dimen/iconSizeButton"
-        android:layout_height="@dimen/iconSizeButton"
-        tools:layout_marginRight="@dimen/iconMargin"
-        tools:layout_marginTop="@dimen/iconMargin"
-
-        android:background="@drawable/settings_work_tool_yellow"/>
-
-
-    <ProgressBar
-        android:id="@+id/progressBarTimeRemaining"
-
+    <EditText
+        android:id="@+id/editText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/titlePage"
-        android:layout_marginTop="20dp"
+        android:layout_below="@+id/commentaire"
         android:layout_centerHorizontal="true"
-
-        style="@android:style/Widget.DeviceDefault.ProgressBar"/>
-
-    <TextView
-        android:id="@+id/timeRemaining"
-
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignBottom="@+id/question"
-        android:layout_centerHorizontal="true"
-        android:layout_below="@+id/progressBarTimeRemaining"
-        android:layout_marginTop="15dp"
-
-        android:text="02:30"
-        android:textStyle="bold|italic"
-        android:textSize="@dimen/chrono"
-        android:textAlignment="center"
-        android:textColor="@color/colorTextePrincipal"/>
-
-
-
-    <TextView
-        android:id="@+id/question"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:paddingLeft="50dp"
-        android:paddingRight="50dp"
-        android:layout_below="@+id/titlePage"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="121dp"
-        android:text="QUESTION HERE"
+        android:layout_marginLeft="100dp"
+        android:paddingLeft="20dp"
+        android:layout_marginTop="30dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="Name"
         android:textStyle="bold|italic"
         android:textSize="@dimen/question"
-        android:textAlignment="center"
         android:textColor="@color/colorTextePrincipal"/>
 
     <Button
         android:id="@+id/buttonTrue"
-        android:background="@color/colorTextePrincipal"
+
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
         android:layout_marginBottom="@dimen/buttonHeight"
         android:height="@dimen/buttonHeight"
-        android:text="@string/vrai"
+
+        android:text="rejouer"
         android:textStyle="bold|italic"
         android:textColor="@color/colorBluePrincipal"
         android:textAlignment="center"
         android:textSize="30dp"
-        android:layout_alignParentRight="true"
-        android:layout_alignParentEnd="true" />
+
+        android:background="@color/colorTextePrincipal"/>
 
     <Button
         android:id="@+id/buttonFalse"
@@ -128,14 +110,11 @@
         android:layout_alignParentRight="true"
         android:layout_alignParentEnd="true"
         android:height="@dimen/buttonHeight"
-        android:text="@string/faux"
+        android:text="voir les scores"
         android:textStyle="bold|italic"
         android:textColor="@color/colorTextePrincipal"
         android:textAlignment="center"
         android:textSize="30dp"
         />
-
-
-
 
 </RelativeLayout>
