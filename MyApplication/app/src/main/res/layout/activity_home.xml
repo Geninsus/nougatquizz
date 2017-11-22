@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context="nougatteam.myapplication.home"
-    android:background="@drawable/back_home_page">
+    android:background="@color/colorBluePrincipal">
 
     <RelativeLayout
         android:id="@+id/relativeLayout"
@@ -36,8 +36,8 @@
         android:layout_width="@dimen/iconSizeButton"
         android:layout_height="@dimen/iconSizeButton"
         android:background="@drawable/cup_yellow"
-        tools:layout_marginLeft="@dimen/iconMargin"
-        tools:layout_marginTop="@dimen/iconMargin"/>
+        android:layout_marginLeft="@dimen/iconMargin"
+        android:layout_marginTop="@dimen/iconMargin"/>
 
     <Button
         android:id="@+id/settingsButton"
@@ -45,13 +45,14 @@
         android:layout_width="@dimen/iconSizeButton"
         android:layout_height="@dimen/iconSizeButton"
         android:background="@drawable/settings_work_tool_yellow"
-        tools:layout_marginRight="@dimen/iconMargin"
-        tools:layout_marginTop="@dimen/iconMargin" />
+        android:layout_marginRight="@dimen/iconMargin"
+        android:layout_marginTop="@dimen/iconMargin" />
 
     <TextView
         android:id="@+id/tapToPlay"
+        android:layout_below="@+id/applicationName"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="380dp"
+        android:layout_marginTop="200dp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Tap to play"
