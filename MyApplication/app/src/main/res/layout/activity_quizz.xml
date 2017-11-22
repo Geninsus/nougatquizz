@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="nougatteam.myapplication.quizz"
+    android:background="@color/colorBluePrincipal">
+
+    <RelativeLayout
+        android:id="@+id/relativeLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="0dp"
+        android:layout_marginTop="0dp" >
+    </RelativeLayout>
+
+    <Button
+        android:id="@+id/scoreButton"
+
+        android:layout_alignParentLeft="true"
+        android:layout_width="@dimen/iconSizeButton"
+        android:layout_height="@dimen/iconSizeButton"
+        tools:layout_marginLeft="@dimen/iconMargin"
+        tools:layout_marginTop="@dimen/iconMargin"
+
+        android:background="@drawable/info"/>
+
+    <TextView
+        android:id="@+id/titlePage"
+
+        android:layout_alignParentLeft="false"
+        android:layout_marginTop="@dimen/iconMargin"
+        android:layout_centerHorizontal="true"
+
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:text="Nougat Quizz"
+        android:textStyle="bold|italic"
+        android:textSize="@dimen/title"
+        android:textAlignment="center"
+        android:textColor="@color/colorTextePrincipal" />
+
+
+    <Button
+        android:id="@+id/settingsButton"
+
+        android:layout_alignParentRight="true"
+        android:layout_width="@dimen/iconSizeButton"
+        android:layout_height="@dimen/iconSizeButton"
+        tools:layout_marginRight="@dimen/iconMargin"
+        tools:layout_marginTop="@dimen/iconMargin"
+
+        android:background="@drawable/settings_work_tool_yellow"/>
+
+
+    <ProgressBar
+        android:id="@+id/progressBarTimeRemaining"
+
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/titlePage"
+        android:layout_marginTop="20dp"
+        android:layout_centerHorizontal="true"
+
+        style="@android:style/Widget.DeviceDefault.ProgressBar"/>
+
+    <TextView
+        android:id="@+id/timeRemaining"
+
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/question"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/progressBarTimeRemaining"
+        android:layout_marginTop="15dp"
+
+        android:text="02:30"
+        android:textStyle="bold|italic"
+        android:textSize="@dimen/chrono"
+        android:textAlignment="center"
+        android:textColor="@color/colorTextePrincipal"/>
+
+
+
+    <TextView
+        android:id="@+id/question"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingLeft="50dp"
+        android:paddingRight="50dp"
+        android:layout_below="@+id/titlePage"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="121dp"
+        android:text="QUESTION HERE"
+        android:textStyle="bold|italic"
+        android:textSize="@dimen/question"
+        android:textAlignment="center"
+        android:textColor="@color/colorTextePrincipal"/>
+
+    <Button
+        android:id="@+id/buttonTrue"
+        android:background="@color/colorTextePrincipal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginBottom="@dimen/buttonHeight"
+        android:height="@dimen/buttonHeight"
+        android:text="@string/vrai"
+        android:textStyle="bold|italic"
+        android:textColor="@color/colorBluePrincipal"
+        android:textAlignment="center"
+        android:textSize="30dp"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
+
+    <Button
+        android:id="@+id/buttonFalse"
+        android:background="@color/colorBluePrincipal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:height="@dimen/buttonHeight"
+        android:text="@string/faux"
+        android:textStyle="bold|italic"
+        android:textColor="@color/colorTextePrincipal"
+        android:textAlignment="center"
+        android:textSize="30dp"
+        />
+
+</RelativeLayout>
