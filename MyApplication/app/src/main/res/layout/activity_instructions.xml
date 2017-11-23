@@ -18,7 +18,7 @@
     </RelativeLayout>
 
     <Button
-        android:id="@+id/scoreButton"
+        android:id="@+id/homeButton"
 
         android:layout_alignParentLeft="true"
         android:layout_width="@dimen/iconSizeButton"
@@ -89,7 +89,7 @@
         android:textSize="60dp"/>
 
     <Button
-        android:id="@+id/button2"
+        android:id="@+id/buttonGo"
         android:background="@color/colorTextePrincipal"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"

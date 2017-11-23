@@ -31,7 +31,7 @@
         android:textColor="@color/colorTextePrincipal" />
 
     <Button
-        android:id="@+id/scoreButton"
+        android:id="@+id/homeButton"
         android:layout_alignParentLeft="true"
         android:layout_width="@dimen/iconSizeButton"
         android:layout_height="@dimen/iconSizeButton"
