@@ -1,19 +1,486 @@
 {
-  "theme1" : [
+  "Dauphins":[
     {
-      "question": "q1",
-      "answer": "a1"
+      "question":"La peau des dauphins et celle des requins sont presque identiques.",
+      "answer":false
     },
     {
-      "question": "q2",
-      "answer": "a2"
-    }
-  ],
-  "theme2" : [
+      "question":"Le boto (Inia geoffrensis) vit dans le fleuve Amazone.",
+      "answer":true
+    },
     {
-      "question": "q3",
-      "answer": "a3"
+      "question":"L’épaulard bondit dans les airs pour attraper des oiseaux au vol.",
+      "answer":false
+    },
+    {
+      "question":"L’épaulard (orque) est deux fois plus gros qu’un éléphant.",
+      "answer":true
+    },
+    {
+      "question":"Les dauphins boivent 12 litres (3 gallons) d’eau par jour.",
+      "answer":false
+    },
+    {
+      "question":"Le dauphin tacheté de l’Atlantique vit dans les mers froides près de l’Arctique.",
+      "answer":false
+    },
+    {
+      "question":"Lorsque son évent lui cause des problèmes, le dauphin peut respirer par le museau.",
+      "answer":false
+    },
+    {
+      "question":"Les dauphins dorment une moitié du cerveau à la fois.",
+      "answer":true
     }
   ],
-  "theme3" : []
+  "Chiens":[
+    {
+      "question":"Un chien peut entendre des sons jusqu’à quatre fois plus loin que l’humain.",
+      "answer":true
+    },
+    {
+      "question":"Les dalmatiens naissent blancs.",
+      "answer":true
+    },
+    {
+      "question":"La durée de gestation d’une femelle est d’environ 60 jours en moyenne.",
+      "answer":true
+    },
+    {
+      "question":"Les dalmatiens ont une ouïe très fine.",
+      "answer":false
+    },
+    {
+      "question":"Bluey, le plus vieux chien connu, a vécu 29 ans et 5 mois.",
+      "answer":true
+    },
+    {
+      "question":"La truffe d’un chien est aussi unique que les empreintes digitales d’un humain",
+      "answer":true
+    },
+    {
+      "question":"Les chiens ne rêvent pas.",
+      "answer":false
+    },
+    {
+      "question":"Le basenji n’aboie pas.",
+      "answer":true
+    }
+  ],
+  "Bière":[
+    {
+      "question":"La bière contient moins de calories que le vin.",
+      "answer":true
+    },
+    {
+      "question":"La fermentation haute permet d’obtenir un plus haut niveau d’alcool que la fermentation basse.",
+      "answer":true
+    },
+    {
+      "question":"Il existe de nombreuses bières de banane.",
+      "answer":true
+    },
+    {
+      "question":"Le houblon sert à favoriser la fermentation de la bière.",
+      "answer":false
+    },
+    {
+      "question":"Le houblon est le grand responsable de l’amertume de la bière.",
+      "answer":true
+    },
+    {
+      "question":"Par habitant, les Australiens sont les plus grands buveurs de bière.",
+      "answer":false
+    },
+    {
+      "question":"L’Irlande est reconnue pour sa production de bières noires.",
+      "answer":true
+    },
+    {
+      "question":"Dans l’Empire romain, la bière était réservée aux nobles.",
+      "answer":false
+    }
+  ],
+  "Fleurs":[
+    {
+      "question":"La plus petite fleur au monde est aquatique.",
+      "answer":true
+    },
+    {
+      "question":"Les lotus sont très vulnérables aux sécheresses.",
+      "answer":false
+    },
+    {
+      "question":"Il existe une orchidée nommée Dracula.",
+      "answer":true
+    },
+    {
+      "question":"Les chrysanthèmes sont des fleurs du printemps.",
+      "answer":false
+    },
+    {
+      "question":"Entre l’âge de 40 et 80 ans, le talipot fleurit une seule fois, puis il meurt.",
+      "answer":true
+    },
+    {
+      "question":"Ce qu’on appelle graine de tournesol est, dans les faits, la graine d’une variété de colza.",
+      "answer":false
+    },
+    {
+      "question":"L’arum titan exhale une forte odeur de viande avariée perceptible à près de 1 km (0,6 mi) de distance.",
+      "answer":true
+    },
+    {
+      "question":"Il faut 10 fleurs de crocus pour produire 1 g de safran.",
+      "answer":false
+    }
+  ],
+  "USA":[
+    {
+      "question":"Les femmes américaines ont obtenu le droit de vote en 1920.",
+      "answer":true
+    },
+    {
+      "question":"La toile American Gothic, une des icônes de la peinture américaine, a été peinte par un immigré autrichien.",
+      "answer":false
+    },
+    {
+      "question":"En incluant les territoires dépendants, les États-Unis couvrent 8 fuseaux horaires.",
+      "answer":false
+    },
+    {
+      "question":"Le premier métro sous-terrain des États-Unis a été construit à Chicago.",
+      "answer":false
+    },
+    {
+      "question":"Il y a eu deux présidents nommés Roosevelt.",
+      "answer":true
+    },
+    {
+      "question":"À l’origine, la route 66 reliait New York à la Californie.",
+      "answer":false
+    },
+    {
+      "question":"Le Rhode Island est l’État le plus petit et aussi le moins peuplé des États-Unis.",
+      "answer":false
+    },
+    {
+      "question":"La colonie de Virginie a été la première colonie permanente à l’origine des États-Unis.",
+      "answer":true
+    }
+  ],
+  "Titanic":[
+    {
+      "question":"Le Titanic avait innové en interdisant de fumer dans les espaces communs.",
+      "answer":false
+    },
+    {
+      "question":"L’Olympic, le navire-jumeau du Titanic, a coulé peu de temps après le Titanic.",
+      "answer":false
+    },
+    {
+      "question":"Le capitaine contemplait la pleine lune quand l’iceberg a frappé le côté du navire.",
+      "answer":false
+    },
+    {
+      "question":"L’épave du Titanic n’a jamais été retrouvée.",
+      "answer":false
+    },
+    {
+      "question":"Le nombre élevé de morts s’explique par le faible nombre de canots de sauvetage du Titanic.",
+      "answer":true
+    },
+    {
+      "question":"Les veilleurs dans le poste d’observation n’avaient pas de jumelles.",
+      "answer":true
+    },
+    {
+      "question":"Un billet en première classe coûtait l’équivalent de 80 000 à 100 000 dollars US d’aujourd’hui.",
+      "answer":true
+    },
+    {
+      "question":"La cave à vin du Titanic comptait plus de 20 000 bouteilles de bière.",
+      "answer":true
+    }
+  ],
+  "Catastrophe":[
+    {
+      "question":"Le 12 août 2000, le sous-marin nucléaire K-141 Koursk disparaissait dans la mer de Barents avec ses missiles et 118 marins.",
+      "answer":true
+    },
+    {
+      "question":"En 1556, le tremblement de terre de Shaanxi, en Chine, est le séisme le plus meurtrier de l’histoire.",
+      "answer":true
+    },
+    {
+      "question":"Le tsunami de 2004 dans l’océan Indien a tué plus de 225 000 personnes.",
+      "answer":true
+    },
+    {
+      "question":"La catastrophe écologique du pétrolier Exxon Valdez est survenue parce que son capitaine était ivre.",
+      "answer":true
+    },
+    {
+      "question":"La peste noire a tué entre 30 et 50% des Européens.",
+      "answer":true
+    },
+    {
+      "question":"Le tremblement de terre de 1755 à Lisbonne a été suivi d’un tsunami, puis d’un immense incendie.",
+      "answer":true
+    },
+    {
+      "question":"L’éruption du Vésuve est celle qui a fait le plus de victimes.",
+      "answer":false
+    },
+    {
+      "question":"La rougeole tue majoritairement des personnes âgées.",
+      "answer":false
+    }
+  ],
+  "FootBall":[
+    {
+      "question":"En 2018, les Émirats arabes unis accueilleront la Coupe du monde.",
+      "answer":true
+    },
+    {
+      "question":"Aucun pays n’a gagné deux Coupes du monde consécutives.",
+      "answer":false
+    },
+    {
+      "question":"La France a remporté la première Coupe du monde en 1930.",
+      "answer":false
+    },
+    {
+      "question":"En 2015, le Canada surprend les États-Unis et remporte la Coupe du monde féminine de football.",
+      "answer":false
+    },
+    {
+      "question":"Le Brésil détient le record du pays organisateur ayant encaissé le plus grand nombre de buts en un match.",
+      "answer":true
+    },
+    {
+      "question":"Le record d’assistance à un match de la Coupe du monde est de 101 000 personnes.",
+      "answer":false
+    },
+    {
+      "question":"L’Allemagne a participé à plus de finales de la Coupe du monde que n’importe quel autre pays.",
+      "answer":true
+    },
+    {
+      "question":"En 1986, le brio de Diego Maradona a permis au Brésil de remporter la Coupe du monde.",
+      "answer":false
+    }
+  ],
+  "Ordinateur":[
+    {
+      "question":"Le premier courriel (spam) vendait du faux Viagra.",
+      "answer":false
+    },
+    {
+      "question":"Steve Jobs a inventé la souris d’ordinateur.",
+      "answer":false
+    },
+    {
+      "question":"Steve Jobs a dévoilé le Macintosh durant un message publicitaire diffusé lors de la finale de la Série mondiale de baseball.",
+      "answer":false
+    },
+    {
+      "question":"À l’origine, le langage BASIC s’adressait aux programmeurs chevronnés.",
+      "answer":false
+    },
+    {
+      "question":"Le transistor a été inventé au début de la Seconde Guerre mondiale pour permettre la communication entre les sous-marins.",
+      "answer":false
+    },
+    {
+      "question":"Le 11 mai 1997, un ordinateur bat le champion d’échecs Garry Kasparov.",
+      "answer":true
+    },
+    {
+      "question":"Le Colossus servait au décryptage de codes secrets allemands.",
+      "answer":true
+    },
+    {
+      "question":"Le premier nom de Pac-Man était Puckman.",
+      "answer":true
+    }
+  ],
+  "Vin":[
+    {
+      "question":"Le vin produit dans les climats chauds est plus acide que celui des climats plus tempérés.",
+      "answer":false
+    },
+    {
+      "question":"Dans les vins blancs, les reflets verdâtres indiquent un vin jeune.",
+      "answer":true
+    },
+    {
+      "question":"Il faut attendre qu’un chêne-liège ait 40 ans avant d’utiliser son écorce pour fabriquer des bouchons.",
+      "answer":true
+    },
+    {
+      "question":"Les forêts d’Asie du Sud-Ouest fournissent la majorité du liège.",
+      "answer":false
+    },
+    {
+      "question":"Il faut environ 1,3 à 1,5 kg (2,9 à 3,3 lb) de raisin pour produire une bouteille de vin.",
+      "answer":true
+    },
+    {
+      "question":"Le chardonnay est un vin blanc de la région de Champagne.",
+      "answer":false
+    },
+    {
+      "question":"Le muselet sert à sceller le bouchon pour éviter que l’oxygène ambiant contamine le champagne.",
+      "answer":false
+    },
+    {
+      "question":"La vallée de Napa est située dans le nord de l’Italie.",
+      "answer":false
+    }
+  ],
+  "Sherlock":[
+    {
+      "question":"Le premier pastiche de Sherlock Holmes a été écrit par J. M. Barrie, le créateur de Peter Pan.",
+      "answer":true
+    },
+    {
+      "question":"Le docteur Watson est un vétéran de la première guerre des Boers.",
+      "answer":false
+    },
+    {
+      "question":"Le Chien des Baskerville est le premier roman mettant en scène Sherlock Holmes.",
+      "answer":false
+    },
+    {
+      "question":"Dans les romans, Sherlock Holmes est un excellent joueur de clavecin.",
+      "answer":false
+    },
+    {
+      "question":"Les chutes dans lesquelles Sherlock Holmes et son ennemi Moriarty disparaissent se trouvent en Suisse.",
+      "answer":true
+    },
+    {
+      "question":"Le fils d’Arthur Conan Doyle a écrit de nouvelles aventures de Sherlock Holmes.",
+      "answer":true
+    },
+    {
+      "question":"Arthur Conan Doyle, le créateur des Sherlock Holmes, a fait libérer deux prisonniers injustement condamnés.",
+      "answer":true
+    },
+    {
+      "question":"Sir Arthur Conan Doyle était médecin de formation, comme le personnage de Watson.",
+      "answer":true
+    }
+  ],
+  "Nourriture":[
+    {
+      "question":"Le homard a longtemps été considéré comme la nourriture des pauvres.",
+      "answer":true
+    },
+    {
+      "question":"La Chine est le premier producteur de soya au monde.",
+      "answer":false
+    },
+    {
+      "question":"Le ketchup a déjà été vendu comme médicament.",
+      "answer":true
+    },
+    {
+      "question":"Nos sens de l’odorat et du goût diminuent en avion.",
+      "answer":true
+    },
+    {
+      "question":"La France est le pays où il se boit le plus de café par habitant.",
+      "answer":false
+    },
+    {
+      "question":"En Nouvelle-Zélande, il y a autant de moutons que d’habitants.",
+      "answer":false
+    },
+    {
+      "question":"L’inventeur de la barbe à papa était dentiste.",
+      "answer":true
+    },
+    {
+      "question":"La première soupe était une soupe d’hippopotame.",
+      "answer":true
+    }
+  ],
+  "Dessert":[
+    {
+      "question":"Comme le chocolat noir, le chocolat blanc a des propriétés antioxydantes.",
+      "answer":false
+    },
+    {
+      "question":"En Norvège, le kransekake est réservé à la célébration de la fête nationale.",
+      "answer":false
+    },
+    {
+      "question":"On appelle cette pâtisserie « éclair » parce qu’elle se mange vite.",
+      "answer":true
+    },
+    {
+      "question":"Dans l’Antiquité, la cannelle servait à l’embaumement.",
+      "answer":true
+    },
+    {
+      "question":"Les Aztèques ont été les premiers à servir le chocolat en boisson.",
+      "answer":true
+    },
+    {
+      "question":"Le Brésil est le plus grand producteur de fèves de cacao.",
+      "answer":false
+    },
+    {
+      "question":"La tarte aux pommes est une création américaine du début de la colonie.",
+      "answer":false
+    },
+    {
+      "question":"Un des plus grands pâtissiers et chefs de l’histoire s’appelait Carême.",
+      "answer":true
+    }
+  ],
+  "HarryPotter": [
+    {
+      "question":"Le célèbre sorcier Harry Potter est né le 31 juillet 1980.",
+      "answer":true
+    },
+    {
+      "question":"La mère de Rubeus Hagrid est la géante Fridluva.",
+      "answer":true
+    },
+    {
+      "question":"La pierre phénoménale a été fabriquée par Nicolas Flamel.",
+      "answer":false
+    },
+    {
+      "question":"Tom Elvis Jedusor n'est autre que le fameux Voldemort.",
+      "answer":true
+    },
+    {
+      "question":"Queudver, Patmol et Cornedrue sont des Animagi.",
+      "answer":true
+    },
+    {
+      "question":"L'Animagus Rita Skeeter est capable de se transformer en sauterelle.",
+      "answer":false
+    },
+    {
+      "question":"Au début du cinquième tome, Cornelius Fudge est persuadé que Voldemort est de retour.",
+      "answer":false
+    },
+    {
+      "question":"Dolores Ombrage interdit à ses élèves de pratiquer la magie.",
+      "answer":true
+    },
+    {
+      "question":"'Levicorpus' est un sort qui a été inventé par Severus Rogue.",
+      "answer":true
+    },
+    {
+      "question":"La coupe de Poufsouffle est cachée dans le coffre-fort des Lestrange.",
+      "answer":true
+    }
+  ]
 }
