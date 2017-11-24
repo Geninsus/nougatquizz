@@ -14,7 +14,6 @@ public class home extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        requestWindowFeature(Window.FEATURE_NO_TITLE);
         getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,
                 WindowManager.LayoutParams.FLAG_FULLSCREEN);
         setContentView(R.layout.activity_home);
@@ -28,8 +27,8 @@ public class home extends AppCompatActivity {
         final TextView tapToPlay = (TextView) findViewById(R.id.tapToPlay);
         tapToPlay.setOnClickListener(new View.OnClickListener() {
             public void onClick(View view) {
-                Intent instructionsActivity = new Intent(home.this, instructions.class);
-                startActivity(instructionsActivity);
+                Intent themeActivity = new Intent(home.this, theme.class);
+                startActivity(themeActivity);
             }
         });
 

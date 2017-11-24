@@ -19,10 +19,9 @@
         <activity android:name=".score" />
         <activity android:name=".endgame" />
         <activity android:name=".chrono" />
-        <activity android:name=".instructions"/>
-        <activity android:name=".quizz"/>
-
-
+        <activity android:name=".instructions" />
+        <activity android:name=".quizz" />
+        <activity android:name=".theme"></activity>
     </application>
 
 </manifest>

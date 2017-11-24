@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#09475C"
+    tools:context="nougatteam.myapplication.theme">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        tools:context="com.ponroy.florian.topquiz.GameActivity"
+        tools:layout_editor_absoluteY="8dp"
+        tools:layout_editor_absoluteX="8dp"
+        tools:ignore="MissingConstraints">
+
+        <LinearLayout
+            android:id="@+id/activity_game_question_header"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:orientation="horizontal"
+            android:layout_weight="1">
+
+            <ImageView
+                android:id="@+id/homeIcon"
+                android:layout_width="0dp"
+                android:layout_height="35sp"
+                android:layout_weight="1"
+                android:layout_gravity="center"
+                android:src="@drawable/home_icon"
+                android:tint="#EBC153"/>
+
+            <TextView
+                android:id="@+id/activity_game_question_title"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="3"
+                android:gravity="center"
+                android:textSize="35sp"
+                android:text="Nougat Quizz"
+                android:textColor="#EBC153"
+                android:textStyle="bold|italic"></TextView>
+
+            <ImageView
+                android:id="@+id/settingsIcon"
+                android:layout_width="0dp"
+                android:layout_height="35sp"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:src="@drawable/settings_work_tool_yellow"
+                android:tint="#EBC153" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/activity_game_question_text"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="2"
+            android:textColor="#EBC153"
+            android:textSize="25sp"
+            android:textStyle="bold"
+            android:gravity="center"
+            android:text="Choisis ton thème !"></TextView>
+
+        <Button
+            android:id="@+id/activity_game_answer1_btn"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="2"
+            android:textColor="#EBC153"
+            android:background="#09475C"
+            android:textSize="30sp"
+            android:textStyle="bold|italic"
+            android:text="Thème 1"/>
+
+        <Button
+            android:id="@+id/activity_game_answer2_btn"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="2"
+            android:textColor="#EBC153"
+            android:background="#09475C"
+            android:textSize="30sp"
+            android:textStyle="bold|italic"
+            android:text="Thème 2"/>
+
+        <Button
+            android:id="@+id/activity_game_answer3_btn"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="2"
+            android:textColor="#EBC153"
+            android:background="#09475C"
+            android:textSize="30sp"
+            android:textStyle="bold|italic"
+            android:text="Thème 3"/>
+
+    </LinearLayout>
+
+</android.support.constraint.ConstraintLayout>
