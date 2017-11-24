@@ -14,7 +14,10 @@ router.get('/', (req, res, next) => {
 
 router.get('/randomthemes/:count', (req, res, next) => {
   db.getRandomCategories(req.params.count).then((val) => {
-    res.send(JSON.stringify(val))
+    let tmp = {
+      'themes': val
+    }
+    res.send(tmp)
   })
 })
 

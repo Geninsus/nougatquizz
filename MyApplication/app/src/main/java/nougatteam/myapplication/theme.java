@@ -8,6 +8,14 @@ import android.view.WindowManager;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import nougatteam.myapplication.interfaces.GameService;
+import nougatteam.myapplication.pojo.GetThemesPojo;
+import retrofit2.Call;
+import retrofit2.Callback;
+import retrofit2.Response;
+import retrofit2.Retrofit;
+import retrofit2.converter.gson.GsonConverterFactory;
+
 public class theme extends AppCompatActivity {
 
     @Override
@@ -21,6 +29,28 @@ public class theme extends AppCompatActivity {
             public void onClick(View view) {
                 Intent homeActivity = new Intent(theme.this, home.class);
                 startActivity(homeActivity);
+            }
+        });
+
+        Retrofit retrofit = new Retrofit.Builder()
+                .baseUrl("http://10.122.7.40:8080/api/")
+                .addConverterFactory(GsonConverterFactory.create())
+                .build();
+
+        GameService service = retrofit.create(GameService.class);
+        Call<GetThemesPojo> themes = service.getThemes(3);
+        themes.enqueue(new Callback<GetThemesPojo>() {
+            @Override
+            public void onResponse(Call<GetThemesPojo> call, Response<GetThemesPojo> response) {
+                if (response.isSuccessful()) {
+                    System.out.println("BONJOUR");
+                    System.out.println(response.body().themes[0]);
+                }
+            }
+
+            @Override
+            public void onFailure(Call<GetThemesPojo> call, Throwable t) {
+                System.out.println("ERROR");
             }
         });
     }
