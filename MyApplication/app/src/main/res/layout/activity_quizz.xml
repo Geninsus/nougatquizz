@@ -65,7 +65,7 @@
         android:layout_below="@+id/titlePage"
         android:layout_marginTop="20dp"
         android:layout_centerHorizontal="true"
-
+        android:indeterminateTint="#EBC153"
         style="@android:style/Widget.DeviceDefault.ProgressBar"/>
 
     <TextView
