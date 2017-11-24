@@ -29,7 +29,7 @@
                 android:tint="#EBC153"/>
 
             <TextView
-                android:id="@+id/activity_game_question_title"
+                android:id="@+id/activity_game_theme_title"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="3"
@@ -50,7 +50,7 @@
         </LinearLayout>
 
         <TextView
-            android:id="@+id/activity_game_question_text"
+            android:id="@+id/activity_game_theme_text"
             android:layout_width="match_parent"
             android:layout_height="0dp"
             android:layout_weight="2"
@@ -61,7 +61,7 @@
             android:text="Choisis ton thème !"></TextView>
 
         <Button
-            android:id="@+id/activity_game_answer1_btn"
+            android:id="@+id/activity_game_theme1_btn"
             android:layout_width="match_parent"
             android:layout_height="0dp"
             android:layout_weight="2"
@@ -72,7 +72,7 @@
             android:text="Thème 1"/>
 
         <Button
-            android:id="@+id/activity_game_answer2_btn"
+            android:id="@+id/activity_game_theme2_btn"
             android:layout_width="match_parent"
             android:layout_height="0dp"
             android:layout_weight="2"
@@ -83,7 +83,7 @@
             android:text="Thème 2"/>
 
         <Button
-            android:id="@+id/activity_game_answer3_btn"
+            android:id="@+id/activity_game_theme3_btn"
             android:layout_width="match_parent"
             android:layout_height="0dp"
             android:layout_weight="2"

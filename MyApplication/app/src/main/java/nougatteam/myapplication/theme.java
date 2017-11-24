@@ -5,6 +5,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.view.WindowManager;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -51,6 +52,28 @@ public class theme extends AppCompatActivity {
             @Override
             public void onFailure(Call<GetThemesPojo> call, Throwable t) {
                 System.out.println("ERROR");
+            }
+        });
+
+        final Button buttonTheme1 = (Button) findViewById(R.id.activity_game_theme1_btn);
+        buttonTheme1.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                Intent instructionsActivity = new Intent(theme.this, instructions.class);
+                startActivity(instructionsActivity);
+            }
+        });
+        final Button buttonTheme2 = (Button) findViewById(R.id.activity_game_theme2_btn);
+        buttonTheme1.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                Intent instructionsActivity = new Intent(theme.this, instructions.class);
+                startActivity(instructionsActivity);
+            }
+        });
+        final Button buttonTheme3 = (Button) findViewById(R.id.activity_game_theme3_btn);
+        buttonTheme1.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                Intent instructionsActivity = new Intent(theme.this, instructions.class);
+                startActivity(instructionsActivity);
             }
         });
     }
