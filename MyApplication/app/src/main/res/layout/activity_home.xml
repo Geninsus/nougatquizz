@@ -7,58 +7,121 @@
     tools:context="nougatteam.myapplication.home"
     android:background="@color/colorBluePrincipal">
 
-    <RelativeLayout
-        android:id="@+id/relativeLayout"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentTop="true"
-        android:layout_marginLeft="0dp"
-        android:layout_marginTop="0dp" >
-    </RelativeLayout>
 
-    <TextView
-        android:layout_alignParentLeft="false"
-        android:layout_marginTop="@dimen/iconMargin"
-        android:layout_centerHorizontal="true"
-        android:id="@+id/applicationName"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Nougat Quizz"
-        android:textStyle="bold|italic"
-        android:textSize="@dimen/title"
-        android:textAlignment="center"
-        android:textColor="@color/colorTextePrincipal" />
-
-    <Button
-        android:id="@+id/scoreButton"
-        android:layout_alignParentLeft="true"
-        android:layout_width="@dimen/iconSizeButton"
-        android:layout_height="@dimen/iconSizeButton"
-        android:background="@drawable/cup_yellow"
-        android:layout_marginLeft="@dimen/iconMargin"
-        android:layout_marginTop="@dimen/iconMargin"/>
-
-    <Button
-        android:id="@+id/settingsButton"
-        android:layout_alignParentRight="true"
-        android:layout_width="@dimen/iconSizeButton"
-        android:layout_height="@dimen/iconSizeButton"
-        android:background="@drawable/settings_work_tool_yellow"
-        android:layout_marginRight="@dimen/iconMargin"
-        android:layout_marginTop="@dimen/iconMargin" />
-
-    <TextView
-        android:id="@+id/tapToPlay"
-        android:layout_below="@+id/applicationName"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="0dp"
-        android:layout_width="match_parent"
+    <LinearLayout
         android:layout_height="match_parent"
-        android:text="Tap to play"
-        android:textColor="@color/colorTextePrincipal"
-        android:gravity="center"
-        android:textStyle="bold|italic"
-        android:textSize="25dp"/>
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        >
+
+        <LinearLayout
+            android:id="@+id/activity_game_question_header"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:orientation="horizontal"
+            android:layout_weight="1">
+
+            <ImageView
+                android:id="@+id/homeIcon"
+                android:layout_width="0dp"
+                android:layout_height="35sp"
+                android:layout_weight="1"
+                android:layout_gravity="center"
+                android:src="@drawable/pause"
+                android:tint="#EBC153"/>
+
+            <TextView
+                android:id="@+id/activity_game_theme_title"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="3"
+                android:gravity="center"
+                android:textSize="35sp"
+                android:text="Nougat Quizz"
+                android:textColor="#EBC153"
+                android:textStyle="bold|italic"></TextView>
+
+            <ImageView
+                android:id="@+id/settingsIcon"
+                android:layout_width="0dp"
+                android:layout_height="35sp"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:src="@drawable/settings_work_tool_yellow"
+                android:tint="#EBC153" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_height="0dp"
+            android:layout_width="match_parent"
+            android:layout_weight="3">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"/>
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="2"
+                android:text="?"
+                android:textColor="@color/colorTextePrincipal"
+                android:gravity="center"
+                android:textStyle="bold|italic"
+                android:textSize="100sp"
+                android:rotation="25"/>
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1" />
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tapToPlay"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:text="Tap to play"
+            android:textColor="@color/colorTextePrincipal"
+            android:gravity="center"
+            android:textStyle="bold|italic"
+            android:textSize="30sp"/>
+
+        <LinearLayout
+            android:layout_height="0dp"
+            android:layout_width="match_parent"
+            android:layout_weight="3"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="2"
+                android:text="?"
+                android:textColor="@color/colorTextePrincipal"
+                android:gravity="center"
+                android:textStyle="bold|italic"
+                android:textSize="100sp"
+                android:rotation="200"/>
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1" />
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+
 
 </RelativeLayout>
