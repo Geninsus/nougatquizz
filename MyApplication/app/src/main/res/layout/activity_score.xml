@@ -1,51 +1,192 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="nougatteam.myapplication.score"
-    android:background="@color/colorBluePrincipal">
+    android:background="#09475C"
+    tools:context="nougatteam.myapplication.score">
 
-    <RelativeLayout
-        android:id="@+id/relativeLayout"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentTop="true"
-        android:layout_marginLeft="0dp"
-        android:layout_marginTop="0dp" >
-    </RelativeLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        tools:ignore="MissingConstraints">
 
-    <TextView
-        android:id="@+id/titlePage"
-        android:layout_alignParentLeft="false"
-        android:layout_marginTop="@dimen/iconMargin"
-        android:layout_centerHorizontal="true"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Scores"
-        android:textStyle="bold|italic"
-        android:textSize="@dimen/title"
-        android:textAlignment="center"
-        android:textColor="@color/colorTextePrincipal" />
+        <LinearLayout
+            android:id="@+id/activity_game_question_header"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:orientation="horizontal"
+            android:layout_weight="1">
 
-    <Button
-        android:id="@+id/homeButton"
-        android:layout_alignParentLeft="true"
-        android:layout_width="@dimen/iconSizeButton"
-        android:layout_height="@dimen/iconSizeButton"
-        android:background="@drawable/home_icon"
-        tools:layout_marginLeft="@dimen/iconMargin"
-        tools:layout_marginTop="@dimen/iconMargin"/>
+            <ImageView
+                android:id="@+id/homeIcon"
+                android:layout_width="0dp"
+                android:layout_height="35sp"
+                android:layout_weight="1"
+                android:layout_gravity="center"
+                android:src="@drawable/home_icon"
+                android:tint="#EBC153"/>
 
-    <Button
-        android:id="@+id/settingsButton"
-        android:layout_alignParentRight="true"
-        android:layout_width="@dimen/iconSizeButton"
-        android:layout_height="@dimen/iconSizeButton"
-        android:background="@drawable/settings_work_tool_yellow"
-        tools:layout_marginRight="@dimen/iconMargin"
-        tools:layout_marginTop="@dimen/iconMargin" />
+            <TextView
+                android:id="@+id/activity_game_theme_title"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="3"
+                android:gravity="center"
+                android:textSize="35sp"
+                android:text="Score"
+                android:textColor="#EBC153"
+                android:textStyle="bold|italic"></TextView>
 
-</RelativeLayout>
+            <ImageView
+                android:id="@+id/settingsIcon"
+                android:layout_width="0dp"
+                android:layout_height="35sp"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:src="@drawable/settings_work_tool_yellow"
+                android:tint="#EBC153" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_height="0dp"
+            android:layout_width="match_parent"
+            android:layout_weight="7"
+            android:orientation="horizontal">
+
+            <LinearLayout android:layout_height="match_parent"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/firstOfList"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:textSize="35sp"
+                    android:text="1."
+                    android:textColor="#EBC153"
+                    android:textStyle="bold|italic"></TextView>
+                <TextView
+                    android:id="@+id/secondOfList"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:textSize="35sp"
+                    android:text="2."
+                    android:textColor="#EBC153"
+                    android:textStyle="bold|italic"></TextView>
+                <TextView
+                    android:id="@+id/thirdOfList"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:textSize="35sp"
+                    android:text="3."
+                    android:textColor="#EBC153"
+                    android:textStyle="bold|italic"></TextView>
+                <TextView
+                    android:id="@+id/forthOfList"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:textSize="35sp"
+                    android:text="4."
+                    android:textColor="#EBC153"
+                    android:textStyle="bold|italic"></TextView>
+                <TextView
+                    android:id="@+id/fifthOfList"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:textSize="35sp"
+                    android:text="5."
+                    android:textColor="#EBC153"
+                    android:textStyle="bold|italic"></TextView>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/pseudo"
+                android:layout_height="match_parent"
+                android:layout_width="0dp"
+                android:layout_weight="3"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/firstPseudo"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:textSize="35sp"
+                    android:text=""
+                    android:textColor="#EBC153"
+                    android:textStyle="bold|italic"></TextView>
+
+                <TextView
+                    android:id="@+id/secondPseudo"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:textSize="35sp"
+                    android:text=""
+                    android:textColor="#EBC153"
+                    android:textStyle="bold|italic"></TextView>
+
+                <TextView
+                    android:id="@+id/thirdPseudo"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:textSize="35sp"
+                    android:text=""
+                    android:textColor="#EBC153"
+                    android:textStyle="bold|italic"></TextView>
+
+                <TextView
+                    android:id="@+id/forthPseudo"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:textSize="35sp"
+                    android:text=""
+                    android:textColor="#EBC153"
+                    android:textStyle="bold|italic"></TextView>
+
+                <TextView
+                    android:id="@+id/fifthPseudo"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:textSize="35sp"
+                    android:text=""
+                    android:textColor="#EBC153"
+                    android:textStyle="bold|italic"></TextView>
+
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/pages"
+            android:layout_height="0dp"
+            android:layout_width="match_parent"
+            android:layout_weight="1"
+            android:orientation="horizontal"></LinearLayout>
+
+    </LinearLayout>
+
+</android.support.constraint.ConstraintLayout>
