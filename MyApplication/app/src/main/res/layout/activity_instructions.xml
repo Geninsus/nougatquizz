@@ -28,7 +28,6 @@
                 android:tint="#EBC153"/>
 
             <TextView
-                android:id="@+id/activity_game_theme_title"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="3"
@@ -72,7 +71,7 @@
                 />
 
             <TextView
-                android:id="@+id/time"
+                android:id="@+id/timeInsructions"
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
                 android:layout_weight="4"
@@ -101,5 +100,5 @@
         </LinearLayout>
 
     </LinearLayout>
-    
+
 </RelativeLayout>

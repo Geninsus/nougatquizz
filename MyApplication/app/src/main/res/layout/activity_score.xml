@@ -13,7 +13,6 @@
         tools:ignore="MissingConstraints">
 
         <LinearLayout
-            android:id="@+id/activity_game_question_header"
             android:layout_width="match_parent"
             android:layout_height="0dp"
             android:orientation="horizontal"
@@ -29,7 +28,6 @@
                 android:tint="#EBC153"/>
 
             <TextView
-                android:id="@+id/activity_game_theme_title"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="3"
@@ -52,16 +50,19 @@
         <LinearLayout
             android:layout_height="0dp"
             android:layout_width="match_parent"
-            android:paddingLeft="5dp"
-            android:paddingRight="5dp"
+            android:paddingLeft="15dp"
+            android:paddingRight="15dp"
+            android:paddingBottom="10dp"
+            android:paddingTop="10dp"
             android:layout_weight="7"
             android:orientation="horizontal">
 
-            <LinearLayout android:layout_height="match_parent"
+            <LinearLayout
+                android:id="@+id/rankLayout"
+                android:layout_height="match_parent"
                 android:layout_width="0dp"
                 android:layout_weight="1"
                 android:orientation="vertical">
-
 
                 <TextView
                     android:id="@+id/Ranking"
@@ -73,17 +74,18 @@
                     android:text="Rank"
                     android:textColor="#EBC153"
                     android:textStyle="bold|italic"></TextView>
+
                 <TextView
                     android:id="@+id/firstOfList"
                     android:layout_width="match_parent"
                     android:layout_height="0dp"
                     android:layout_weight="1"
-                    android:
                     android:gravity="center"
                     android:textSize="25sp"
                     android:text="1."
                     android:textColor="#EBC153"
                     android:textStyle="bold|italic"></TextView>
+
                 <TextView
                     android:id="@+id/secondOfList"
                     android:layout_width="match_parent"
@@ -94,6 +96,7 @@
                     android:text="2."
                     android:textColor="#EBC153"
                     android:textStyle="bold|italic"></TextView>
+
                 <TextView
                     android:id="@+id/thirdOfList"
                     android:layout_width="match_parent"
@@ -104,6 +107,7 @@
                     android:text="3."
                     android:textColor="#EBC153"
                     android:textStyle="bold|italic"></TextView>
+
                 <TextView
                     android:id="@+id/forthOfList"
                     android:layout_width="match_parent"
@@ -114,6 +118,7 @@
                     android:text="4."
                     android:textColor="#EBC153"
                     android:textStyle="bold|italic"></TextView>
+
                 <TextView
                     android:id="@+id/fifthOfList"
                     android:layout_width="match_parent"
@@ -128,14 +133,14 @@
             </LinearLayout>
 
             <LinearLayout
-                android:id="@+id/pseudo"
+                android:id="@+id/pseudoLayout"
                 android:layout_height="match_parent"
                 android:layout_width="0dp"
                 android:layout_weight="2"
                 android:orientation="vertical">
 
                 <TextView
-                    android:id="@+id/Peudo"
+                    android:id="@+id/Pseudo"
                     android:layout_width="match_parent"
                     android:layout_height="0dp"
                     android:layout_weight="1"
@@ -204,7 +209,7 @@
             </LinearLayout>
 
             <LinearLayout
-                android:id="@+id/quizzTheme"
+                android:id="@+id/themeLayout"
                 android:layout_height="match_parent"
                 android:layout_width="0dp"
                 android:orientation="vertical"
@@ -285,7 +290,7 @@
             </LinearLayout>
 
             <LinearLayout
-                android:id="@+id/points"
+                android:id="@+id/pointsLayout"
                 android:layout_height="match_parent"
                 android:layout_width="0dp"
                 android:orientation="vertical"

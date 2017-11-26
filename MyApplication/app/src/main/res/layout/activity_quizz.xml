@@ -14,14 +14,13 @@
         android:orientation="vertical">
 
         <LinearLayout
-            android:id="@+id/activity_game_question_header"
             android:layout_width="match_parent"
             android:layout_height="0dp"
             android:orientation="horizontal"
             android:layout_weight="1">
 
             <ImageView
-                android:id="@+id/homeIcon"
+                android:id="@+id/pauseIcon"
                 android:layout_width="0dp"
                 android:layout_height="35sp"
                 android:layout_weight="1"
@@ -30,7 +29,6 @@
                 android:tint="#EBC153"/>
 
             <TextView
-                android:id="@+id/activity_game_theme_title"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="3"
@@ -69,12 +67,10 @@
 
             <TextView
                 android:id="@+id/timeRemaining"
-
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
                 android:gravity="center"
                 android:layout_weight="1"
-
                 android:text="02:30"
                 android:textStyle="bold|italic"
                 android:textSize="@dimen/chrono"
@@ -114,7 +110,6 @@
                 android:text="@string/faux"
                 android:textStyle="bold|italic"
                 android:textColor="@color/colorTextePrincipal"
-
                 android:textSize="30dp"
                 />
 

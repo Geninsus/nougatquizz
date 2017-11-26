@@ -9,11 +9,9 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:orientation="vertical"
-        tools:ignore="MissingConstraints">
+        android:orientation="vertical">
 
         <LinearLayout
-            android:id="@+id/activity_game_question_header"
             android:layout_width="match_parent"
             android:layout_height="0dp"
             android:orientation="horizontal"
@@ -29,7 +27,6 @@
                 android:tint="#EBC153"/>
 
             <TextView
-                android:id="@+id/activity_game_theme_title"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="3"

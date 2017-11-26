@@ -13,7 +13,6 @@
         android:orientation="vertical">
 
         <LinearLayout
-            android:id="@+id/activity_game_endgame_header"
             android:layout_width="match_parent"
             android:layout_height="0dp"
             android:orientation="horizontal"
@@ -35,7 +34,7 @@
                 android:layout_weight="3"
                 android:gravity="center"
                 android:textSize="35sp"
-                android:text=""
+                android:text="Votre Score"
                 android:textColor="#EBC153"
                 android:textStyle="bold|italic"></TextView>
 
@@ -92,7 +91,6 @@
 
             <Button
                 android:id="@+id/restart"
-
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
                 android:layout_weight="1"
@@ -109,7 +107,6 @@
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
                 android:layout_weight="1"
-
                 android:text="scores"
                 android:textStyle="bold|italic"
                 android:textColor="@color/colorTextePrincipal"
