@@ -52,6 +52,8 @@
         <LinearLayout
             android:layout_height="0dp"
             android:layout_width="match_parent"
+            android:paddingLeft="5dp"
+            android:paddingRight="5dp"
             android:layout_weight="7"
             android:orientation="horizontal">
 
@@ -60,13 +62,25 @@
                 android:layout_weight="1"
                 android:orientation="vertical">
 
+
+                <TextView
+                    android:id="@+id/Ranking"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:textSize="25sp"
+                    android:text="Rank"
+                    android:textColor="#EBC153"
+                    android:textStyle="bold|italic"></TextView>
                 <TextView
                     android:id="@+id/firstOfList"
                     android:layout_width="match_parent"
                     android:layout_height="0dp"
                     android:layout_weight="1"
+                    android:
                     android:gravity="center"
-                    android:textSize="35sp"
+                    android:textSize="25sp"
                     android:text="1."
                     android:textColor="#EBC153"
                     android:textStyle="bold|italic"></TextView>
@@ -76,7 +90,7 @@
                     android:layout_height="0dp"
                     android:layout_weight="1"
                     android:gravity="center"
-                    android:textSize="35sp"
+                    android:textSize="25sp"
                     android:text="2."
                     android:textColor="#EBC153"
                     android:textStyle="bold|italic"></TextView>
@@ -86,7 +100,7 @@
                     android:layout_height="0dp"
                     android:layout_weight="1"
                     android:gravity="center"
-                    android:textSize="35sp"
+                    android:textSize="25sp"
                     android:text="3."
                     android:textColor="#EBC153"
                     android:textStyle="bold|italic"></TextView>
@@ -96,7 +110,7 @@
                     android:layout_height="0dp"
                     android:layout_weight="1"
                     android:gravity="center"
-                    android:textSize="35sp"
+                    android:textSize="25sp"
                     android:text="4."
                     android:textColor="#EBC153"
                     android:textStyle="bold|italic"></TextView>
@@ -106,7 +120,7 @@
                     android:layout_height="0dp"
                     android:layout_weight="1"
                     android:gravity="center"
-                    android:textSize="35sp"
+                    android:textSize="25sp"
                     android:text="5."
                     android:textColor="#EBC153"
                     android:textStyle="bold|italic"></TextView>
@@ -117,8 +131,19 @@
                 android:id="@+id/pseudo"
                 android:layout_height="match_parent"
                 android:layout_width="0dp"
-                android:layout_weight="3"
+                android:layout_weight="2"
                 android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/Peudo"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:textSize="25sp"
+                    android:text="Name"
+                    android:textColor="#EBC153"
+                    android:textStyle="bold|italic"></TextView>
 
                 <TextView
                     android:id="@+id/firstPseudo"
@@ -126,7 +151,7 @@
                     android:layout_height="0dp"
                     android:layout_weight="1"
                     android:gravity="center"
-                    android:textSize="35sp"
+                    android:textSize="25sp"
                     android:text=""
                     android:textColor="#EBC153"
                     android:textStyle="bold|italic"></TextView>
@@ -137,7 +162,7 @@
                     android:layout_height="0dp"
                     android:layout_weight="1"
                     android:gravity="center"
-                    android:textSize="35sp"
+                    android:textSize="25sp"
                     android:text=""
                     android:textColor="#EBC153"
                     android:textStyle="bold|italic"></TextView>
@@ -148,7 +173,7 @@
                     android:layout_height="0dp"
                     android:layout_weight="1"
                     android:gravity="center"
-                    android:textSize="35sp"
+                    android:textSize="25sp"
                     android:text=""
                     android:textColor="#EBC153"
                     android:textStyle="bold|italic"></TextView>
@@ -159,7 +184,7 @@
                     android:layout_height="0dp"
                     android:layout_weight="1"
                     android:gravity="center"
-                    android:textSize="35sp"
+                    android:textSize="25sp"
                     android:text=""
                     android:textColor="#EBC153"
                     android:textStyle="bold|italic"></TextView>
@@ -170,13 +195,177 @@
                     android:layout_height="0dp"
                     android:layout_weight="1"
                     android:gravity="center"
-                    android:textSize="35sp"
+                    android:textSize="25sp"
                     android:text=""
                     android:textColor="#EBC153"
                     android:textStyle="bold|italic"></TextView>
 
 
             </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/quizzTheme"
+                android:layout_height="match_parent"
+                android:layout_width="0dp"
+                android:orientation="vertical"
+                android:layout_weight="2">
+
+                <TextView
+                    android:id="@+id/Theme"
+                    android:layout_height="0dp"
+                    android:layout_width="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="Theme"
+                    android:textSize="25sp"
+                    android:textColor="@color/colorTextePrincipal"
+                    android:textStyle="bold|italic">
+                </TextView>
+
+                <TextView
+                    android:id="@+id/firstTheme"
+                    android:layout_height="0dp"
+                    android:layout_width="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text=""
+                    android:textSize="25sp"
+                    android:textColor="@color/colorTextePrincipal"
+                    android:textStyle="bold|italic">
+                </TextView>
+
+                <TextView
+                    android:id="@+id/secondTheme"
+                    android:layout_height="0dp"
+                    android:layout_width="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text=""
+                    android:textSize="25sp"
+                    android:textColor="@color/colorTextePrincipal"
+                    android:textStyle="bold|italic">
+                </TextView>
+
+                <TextView
+                    android:id="@+id/thirdTheme"
+                    android:layout_height="0dp"
+                    android:layout_width="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text=""
+                    android:textSize="25sp"
+                    android:textColor="@color/colorTextePrincipal"
+                    android:textStyle="bold|italic">
+                </TextView>
+
+                <TextView
+                    android:id="@+id/forthTheme"
+                    android:layout_height="0dp"
+                    android:layout_width="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text=""
+                    android:textSize="25sp"
+                    android:textColor="@color/colorTextePrincipal"
+                    android:textStyle="bold|italic">
+                </TextView>
+
+                <TextView
+                    android:id="@+id/fifthTheme"
+                    android:layout_height="0dp"
+                    android:layout_width="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text=""
+                    android:textSize="25sp"
+                    android:textColor="@color/colorTextePrincipal"
+                    android:textStyle="bold|italic">
+                </TextView>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/points"
+                android:layout_height="match_parent"
+                android:layout_width="0dp"
+                android:orientation="vertical"
+                android:layout_weight="1">
+
+                <TextView
+                    android:id="@+id/Points"
+                    android:layout_height="0dp"
+                    android:layout_width="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="Point"
+                    android:textSize="25sp"
+                    android:textColor="@color/colorTextePrincipal"
+                    android:textStyle="bold|italic">
+                </TextView>
+
+                <TextView
+                    android:id="@+id/firstPoint"
+                    android:layout_height="0dp"
+                    android:layout_width="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text=""
+                    android:textSize="25sp"
+                    android:textColor="@color/colorTextePrincipal"
+                    android:textStyle="bold|italic">
+                </TextView>
+
+                <TextView
+                    android:id="@+id/secondPoint"
+                    android:layout_height="0dp"
+                    android:layout_width="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text=""
+                    android:textSize="25sp"
+                    android:textColor="@color/colorTextePrincipal"
+                    android:textStyle="bold|italic">
+                </TextView>
+
+                <TextView
+                    android:id="@+id/thirdPoint"
+                    android:layout_height="0dp"
+                    android:layout_width="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text=""
+                    android:textSize="25sp"
+                    android:textColor="@color/colorTextePrincipal"
+                    android:textStyle="bold|italic">
+                </TextView>
+
+                <TextView
+                    android:id="@+id/forthPoint"
+                    android:layout_height="0dp"
+                    android:layout_width="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text=""
+                    android:textSize="25sp"
+                    android:textColor="@color/colorTextePrincipal"
+                    android:textStyle="bold|italic">
+                </TextView>
+
+                <TextView
+                    android:id="@+id/fifthPoint"
+                    android:layout_height="0dp"
+                    android:layout_width="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text=""
+                    android:textSize="25sp"
+                    android:textColor="@color/colorTextePrincipal"
+                    android:textStyle="bold|italic">
+                </TextView>
+
+            </LinearLayout>
+
+
 
         </LinearLayout>
 
