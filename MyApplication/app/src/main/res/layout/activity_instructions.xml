@@ -7,116 +7,99 @@
     tools:context="nougatteam.myapplication.instructions"
     android:background="@color/colorBluePrincipal">
 
-    <RelativeLayout
-        android:id="@+id/relativeLayout"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentTop="true"
-        android:layout_marginLeft="0dp"
-        android:layout_marginTop="0dp" >
-    </RelativeLayout>
+    <LinearLayout android:layout_height="match_parent"
+        android:layout_width="match_parent"
+        android:orientation="vertical">
 
-    <Button
-        android:id="@+id/homeButton"
+        <LinearLayout
+            android:id="@+id/activity_game_question_header"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:orientation="horizontal"
+            android:layout_weight="1">
 
-        android:layout_alignParentLeft="true"
-        android:layout_width="@dimen/iconSizeButton"
-        android:layout_height="@dimen/iconSizeButton"
-        tools:layout_marginLeft="@dimen/iconMargin"
-        tools:layout_marginTop="@dimen/iconMargin"
+            <ImageView
+                android:id="@+id/homeIcon"
+                android:layout_width="0dp"
+                android:layout_height="35sp"
+                android:layout_weight="1"
+                android:layout_gravity="center"
+                android:src="@drawable/home_icon"
+                android:tint="#EBC153"/>
 
-        android:background="@drawable/home_icon"/>
+            <TextView
+                android:id="@+id/activity_game_theme_title"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="3"
+                android:gravity="center"
+                android:textSize="35sp"
+                android:text="Instructions"
+                android:textColor="#EBC153"
+                android:textStyle="bold|italic"></TextView>
 
-    <TextView
-        android:id="@+id/titlePage"
+            <ImageView
+                android:id="@+id/settingsIcon"
+                android:layout_width="0dp"
+                android:layout_height="35sp"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:src="@drawable/settings_work_tool_yellow"
+                android:tint="#EBC153" />
+        </LinearLayout>
 
-        android:layout_alignParentLeft="false"
-        android:layout_marginTop="@dimen/iconMargin"
-        android:layout_centerHorizontal="true"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        <LinearLayout
+            android:layout_height="0dp"
+            android:layout_width="match_parent"
+            android:orientation="vertical"
+            android:layout_weight="8">
 
-        android:text="Instructions"
-        android:textStyle="bold|italic"
-        android:textSize="@dimen/title"
-        android:textAlignment="center"
-        android:textColor="@color/colorTextePrincipal" />
+            <TextView
+                android:id="@+id/instructions"
 
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="5"
+                android:gravity="bottom"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
 
+                android:text="@string/instructions"
+                android:textStyle="bold|italic"
+                android:textColor="@color/colorTextePrincipal"
+                android:textAlignment="center"
+                android:textSize="30sp"
+                />
 
-    <Button
-        android:id="@+id/settingsButton"
+            <TextView
+                android:id="@+id/time"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="4"
+                android:gravity="top"
 
-        android:layout_alignParentRight="true"
-        android:layout_width="@dimen/iconSizeButton"
-        android:layout_height="@dimen/iconSizeButton"
-        tools:layout_marginRight="@dimen/iconMargin"
-        tools:layout_marginTop="@dimen/iconMargin"
+                android:text="@string/duréeChrono"
+                android:textStyle="bold|italic"
+                android:textColor="@color/colorTextePrincipal"
+                android:textAlignment="center"
+                android:textSize="60dp"/>
 
-        android:background="@drawable/settings_work_tool_yellow"/>
+            <Button
+                android:id="@+id/buttonGo"
+                android:background="@color/colorTextePrincipal"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="3"
+                android:gravity="center"
 
-    <TextView
-        android:id="@+id/instructions"
+                android:text="J'ai compris"
+                android:textStyle="bold|italic"
+                android:textColor="@color/colorBluePrincipal"
+                android:textSize="30dp"
+                />
 
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/titlePage"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:layout_marginTop="75dp"
-        android:paddingRight="50dp"
-        android:paddingLeft="50dp"
+        </LinearLayout>
 
-        android:text="@string/instructions"
-        android:textStyle="bold|italic"
-        android:textColor="@color/colorTextePrincipal"
-        android:textAlignment="center"
-        android:textSize="36dp"
-        />
-
-    <TextView
-        android:id="@+id/time"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/instructions"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="35dp"
-        android:text="@string/duréeChrono"
-        android:textStyle="bold|italic"
-        android:textColor="@color/colorTextePrincipal"
-        android:textAlignment="center"
-        android:textSize="60dp"/>
-
-    <Button
-        android:id="@+id/buttonGo"
-        android:background="@color/colorTextePrincipal"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentRight="true"
-        android:layout_alignParentEnd="true"
-        android:height="@dimen/buttonHeight"
-        android:text="J'ai compris"
-        android:textStyle="bold|italic"
-        android:textColor="@color/colorBluePrincipal"
-        android:textAlignment="center"
-        android:textSize="30dp"
-        />
-
-    <CheckBox
-        android:id="@+id/checkBox"
-
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/time"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="25dp"
-
-        android:text="Ne plus afficher ce message"
-        android:textColor="@color/colorTextePrincipal"
-        android:textSize="20dp"/>
-
+    </LinearLayout>
+    
 </RelativeLayout>
