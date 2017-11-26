@@ -7,117 +7,119 @@
     tools:context="nougatteam.myapplication.endgame"
     android:background="@color/colorBluePrincipal">
 
+    <LinearLayout
+        android:layout_height="match_parent"
+        android:layout_width="match_parent"
+        android:orientation="vertical">
 
-    <RelativeLayout
-        android:id="@+id/relativeLayout"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentTop="true"
-        android:layout_marginLeft="0dp"
-        android:layout_marginTop="0dp" >
-    </RelativeLayout>
+        <LinearLayout
+            android:id="@+id/activity_game_endgame_header"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:orientation="horizontal"
+            android:layout_weight="1">
+
+            <ImageView
+                android:id="@+id/pauseIcon"
+                android:layout_width="0dp"
+                android:layout_height="35sp"
+                android:layout_weight="1"
+                android:layout_gravity="center"
+                android:src="@drawable/pause"
+                android:tint="#EBC153"/>
+
+            <TextView
+                android:id="@+id/activity_game_endgame_title"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="3"
+                android:gravity="center"
+                android:textSize="35sp"
+                android:text=""
+                android:textColor="#EBC153"
+                android:textStyle="bold|italic"></TextView>
+
+            <ImageView
+                android:id="@+id/settingsIcon"
+                android:layout_width="0dp"
+                android:layout_height="35sp"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:src="@drawable/settings_work_tool_yellow"
+                android:tint="#EBC153" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_height="0dp"
+            android:layout_width="match_parent"
+            android:orientation="vertical"
+            android:layout_weight="8">
+
+            <TextView
+                android:id="@+id/score"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:gravity="center|bottom"
+                android:text="10"
+                android:textStyle="bold|italic"
+                android:textSize="55sp"
+                android:textColor="@color/colorTextePrincipal" />
+
+            <TextView
+                android:id="@+id/commentaire"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:text="Commentaire score"
+                android:gravity="top|center"
+                android:textStyle="bold|italic"
+                android:textSize="@dimen/question"
+                android:textColor="@color/colorTextePrincipal" />
+            <EditText
+                android:id="@+id/pseudo"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:layout_marginRight="30dp"
+                android:layout_marginLeft="30dp"
+                android:inputType="textPersonName"
+                android:gravity="center"
+                android:text="Pseudo"
+                android:textStyle="bold|italic"
+                android:textSize="@dimen/question"
+                android:textColor="@color/colorTextePrincipal"/>
+
+            <Button
+                android:id="@+id/restart"
+
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:text="rejouer"
+                android:textStyle="bold|italic"
+                android:textColor="@color/colorBluePrincipal"
+                android:textAlignment="center"
+                android:textSize="30dp"
+                android:background="@color/colorTextePrincipal"/>
+
+            <Button
+                android:id="@+id/scores"
+                android:background="@color/colorBluePrincipal"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+
+                android:text="scores"
+                android:textStyle="bold|italic"
+                android:textColor="@color/colorTextePrincipal"
+                android:textAlignment="center"
+                android:textSize="30dp"
+                />
 
 
+        </LinearLayout>
 
-    <Button
-        android:id="@+id/scoreButton"
-        android:layout_alignParentLeft="true"
-        android:layout_width="@dimen/iconSizeButton"
-        android:layout_height="@dimen/iconSizeButton"
-        android:background="@drawable/home_icon"
-        tools:layout_marginLeft="@dimen/iconMargin"
-        tools:layout_marginTop="@dimen/iconMargin"/>
-
-    <Button
-        android:id="@+id/settingsButton"
-        android:layout_alignParentRight="true"
-        android:layout_width="@dimen/iconSizeButton"
-        android:layout_height="@dimen/iconSizeButton"
-        android:background="@drawable/settings_work_tool_yellow"
-        tools:layout_marginRight="@dimen/iconMargin"
-        tools:layout_marginTop="@dimen/iconMargin" />
-
-    <TextView
-        android:id="@+id/score"
-        android:layout_alignBottom="@+id/commentaire"
-        android:layout_centerHorizontal="true"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="64dp"
-        android:text="40"
-        android:textStyle="bold|italic"
-        android:textSize="@dimen/score"
-        android:textAlignment="center"
-        android:textColor="@color/colorTextePrincipal"/>
-
-    <TextView
-        android:id="@+id/commentaire"
-        android:layout_marginTop="200dp"
-        android:layout_centerHorizontal="true"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Commentaire score"
-        android:textStyle="bold|italic"
-        android:textSize="@dimen/question"
-        android:textAlignment="center"
-        android:textColor="@color/colorTextePrincipal" />
-
-
-
-    <EditText
-        android:id="@+id/editText"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/commentaire"
-        android:layout_centerHorizontal="true"
-        android:layout_marginLeft="100dp"
-        android:paddingLeft="20dp"
-        android:layout_marginTop="30dp"
-        android:ems="10"
-        android:inputType="textPersonName"
-        android:text="Name"
-        android:textStyle="bold|italic"
-        android:textSize="@dimen/question"
-        android:textColor="@color/colorTextePrincipal"/>
-
-    <Button
-        android:id="@+id/buttonTrue"
-
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentRight="true"
-        android:layout_alignParentEnd="true"
-        android:layout_marginBottom="@dimen/buttonHeight"
-        android:height="@dimen/buttonHeight"
-
-        android:text="rejouer"
-        android:textStyle="bold|italic"
-        android:textColor="@color/colorBluePrincipal"
-        android:textAlignment="center"
-        android:textSize="30dp"
-
-        android:background="@color/colorTextePrincipal"/>
-
-    <Button
-        android:id="@+id/buttonFalse"
-        android:background="@color/colorBluePrincipal"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentRight="true"
-        android:layout_alignParentEnd="true"
-        android:height="@dimen/buttonHeight"
-        android:text="voir les scores"
-        android:textStyle="bold|italic"
-        android:textColor="@color/colorTextePrincipal"
-        android:textAlignment="center"
-        android:textSize="30dp"
-        />
+    </LinearLayout>
 
 </RelativeLayout>
