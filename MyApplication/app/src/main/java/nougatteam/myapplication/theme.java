@@ -33,6 +33,28 @@ public class theme extends AppCompatActivity {
             }
         });
 
+        final Button buttonTheme1 = (Button) findViewById(R.id.activity_game_theme1_btn);
+        buttonTheme1.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                Intent instructionsActivity = new Intent(theme.this, instructions.class);
+                startActivity(instructionsActivity);
+            }
+        });
+        final Button buttonTheme2 = (Button) findViewById(R.id.activity_game_theme2_btn);
+        buttonTheme2.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                Intent instructionsActivity = new Intent(theme.this, instructions.class);
+                startActivity(instructionsActivity);
+            }
+        });
+        final Button buttonTheme3 = (Button) findViewById(R.id.activity_game_theme3_btn);
+        buttonTheme3.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                Intent instructionsActivity = new Intent(theme.this, instructions.class);
+                startActivity(instructionsActivity);
+            }
+        });
+
         Retrofit retrofit = new Retrofit.Builder()
                 .baseUrl("http://10.122.7.40:8080/api/")
                 .addConverterFactory(GsonConverterFactory.create())
@@ -44,36 +66,15 @@ public class theme extends AppCompatActivity {
             @Override
             public void onResponse(Call<GetThemesPojo> call, Response<GetThemesPojo> response) {
                 if (response.isSuccessful()) {
-                    System.out.println("BONJOUR");
-                    System.out.println(response.body().themes[0]);
+                    buttonTheme1.setText(response.body().themes[0]);
+                    buttonTheme2.setText(response.body().themes[1]);
+                    buttonTheme3.setText(response.body().themes[2]);
                 }
             }
 
             @Override
             public void onFailure(Call<GetThemesPojo> call, Throwable t) {
                 System.out.println("ERROR");
-            }
-        });
-
-        final Button buttonTheme1 = (Button) findViewById(R.id.activity_game_theme1_btn);
-        buttonTheme1.setOnClickListener(new View.OnClickListener() {
-            public void onClick(View v) {
-                Intent instructionsActivity = new Intent(theme.this, instructions.class);
-                startActivity(instructionsActivity);
-            }
-        });
-        final Button buttonTheme2 = (Button) findViewById(R.id.activity_game_theme2_btn);
-        buttonTheme1.setOnClickListener(new View.OnClickListener() {
-            public void onClick(View v) {
-                Intent instructionsActivity = new Intent(theme.this, instructions.class);
-                startActivity(instructionsActivity);
-            }
-        });
-        final Button buttonTheme3 = (Button) findViewById(R.id.activity_game_theme3_btn);
-        buttonTheme1.setOnClickListener(new View.OnClickListener() {
-            public void onClick(View v) {
-                Intent instructionsActivity = new Intent(theme.this, instructions.class);
-                startActivity(instructionsActivity);
             }
         });
     }
