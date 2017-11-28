@@ -7,6 +7,7 @@ import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;
 import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 public class home extends AppCompatActivity {
@@ -17,7 +18,7 @@ public class home extends AppCompatActivity {
         getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,
                 WindowManager.LayoutParams.FLAG_FULLSCREEN);
         setContentView(R.layout.activity_home);
-        final Button buttonScore = (Button) findViewById(R.id.scoreButton);
+        final ImageView buttonScore = (ImageView) findViewById(R.id.scoreIcon);
         buttonScore.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
                 Intent scoreActivity = new Intent(home.this, score.class);
