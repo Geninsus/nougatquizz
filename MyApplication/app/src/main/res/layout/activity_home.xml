@@ -50,6 +50,7 @@
         </LinearLayout>
 
         <LinearLayout
+            android:id="@+id/zoneTap1"
             android:layout_height="0dp"
             android:layout_width="match_parent"
             android:layout_weight="3">
@@ -89,6 +90,7 @@
             android:textSize="30sp"/>
 
         <LinearLayout
+            android:id="@+id/zoneTap2"
             android:layout_height="0dp"
             android:layout_width="match_parent"
             android:layout_weight="3"

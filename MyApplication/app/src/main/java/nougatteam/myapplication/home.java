@@ -8,6 +8,7 @@ import android.view.Window;
 import android.view.WindowManager;
 import android.widget.Button;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 
 public class home extends AppCompatActivity {
@@ -25,6 +26,20 @@ public class home extends AppCompatActivity {
                 startActivity(scoreActivity);
             }
         });
+        final LinearLayout zoneTap1 = (LinearLayout) findViewById(R.id.zoneTap1);
+        zoneTap1.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View view) {
+                Intent themeActivity = new Intent(home.this, theme.class);
+                startActivity(themeActivity);
+            }
+        });
+        final LinearLayout zoneTap2 = (LinearLayout) findViewById(R.id.zoneTap2);
+        zoneTap2.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View view) {
+                Intent themeActivity = new Intent(home.this, theme.class);
+                startActivity(themeActivity);
+            }
+        });
         final TextView tapToPlay = (TextView) findViewById(R.id.tapToPlay);
         tapToPlay.setOnClickListener(new View.OnClickListener() {
             public void onClick(View view) {
@@ -32,6 +47,5 @@ public class home extends AppCompatActivity {
                 startActivity(themeActivity);
             }
         });
-
     }
 }
