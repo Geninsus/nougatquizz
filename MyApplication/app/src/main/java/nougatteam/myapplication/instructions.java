@@ -22,6 +22,7 @@ public class instructions extends AppCompatActivity {
             public void onClick(View v) {
                 Intent homeActivity = new Intent(instructions.this, home.class);
                 startActivity(homeActivity);
+                finish();
             }
         });
 

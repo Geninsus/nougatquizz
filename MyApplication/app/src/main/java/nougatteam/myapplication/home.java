@@ -24,6 +24,7 @@ public class home extends AppCompatActivity {
             public void onClick(View v) {
                 Intent scoreActivity = new Intent(home.this, score.class);
                 startActivity(scoreActivity);
+                finish();
             }
         });
         final LinearLayout zoneTap1 = (LinearLayout) findViewById(R.id.zoneTap1);
@@ -31,6 +32,7 @@ public class home extends AppCompatActivity {
             public void onClick(View view) {
                 Intent themeActivity = new Intent(home.this, theme.class);
                 startActivity(themeActivity);
+                finish();
             }
         });
         final LinearLayout zoneTap2 = (LinearLayout) findViewById(R.id.zoneTap2);
@@ -38,6 +40,7 @@ public class home extends AppCompatActivity {
             public void onClick(View view) {
                 Intent themeActivity = new Intent(home.this, theme.class);
                 startActivity(themeActivity);
+                finish();
             }
         });
         final TextView tapToPlay = (TextView) findViewById(R.id.tapToPlay);
@@ -45,6 +48,7 @@ public class home extends AppCompatActivity {
             public void onClick(View view) {
                 Intent themeActivity = new Intent(home.this, theme.class);
                 startActivity(themeActivity);
+                finish();
             }
         });
     }

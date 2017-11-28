@@ -21,6 +21,7 @@ public class score extends AppCompatActivity {
             public void onClick(View v) {
                 Intent homeActivity = new Intent(score.this, home.class);
                 startActivity(homeActivity);
+                finish();
             }
         });
     }

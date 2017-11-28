@@ -31,6 +31,7 @@ public class theme extends AppCompatActivity {
             public void onClick(View view) {
                 Intent homeActivity = new Intent(theme.this, home.class);
                 startActivity(homeActivity);
+                finish();
             }
         });
 
@@ -39,7 +40,7 @@ public class theme extends AppCompatActivity {
         final Button buttonTheme3 = (Button) findViewById(R.id.activity_game_theme3_btn);
 
         Retrofit retrofit = new Retrofit.Builder()
-                .baseUrl("http://10.122.15.0:8080/api/")
+                .baseUrl("http://192.168.1.26:8080/api/")
                 .addConverterFactory(GsonConverterFactory.create())
                 .build();
 
@@ -73,30 +74,18 @@ public class theme extends AppCompatActivity {
         buttonTheme2.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
                 Intent instructionsActivity = new Intent(theme.this, instructions.class);
+                instructionsActivity.putExtra("theme", buttonTheme2.getText().toString());
                 startActivity(instructionsActivity);
+                finish();
             }
         });
 
         buttonTheme3.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
                 Intent instructionsActivity = new Intent(theme.this, instructions.class);
+                instructionsActivity.putExtra("theme", buttonTheme3.getText().toString());
                 startActivity(instructionsActivity);
-            }
-        });
-
-        // DEMO 3 QUESTIONS THEME HARRY POTTER
-        Call<GetQuestionsPojo> questions = service.getQuestions("HarryPotter", 3);
-        questions.enqueue(new Callback<GetQuestionsPojo>() {
-            @Override
-            public void onResponse(Call<GetQuestionsPojo> call, Response<GetQuestionsPojo> response) {
-                if (response.isSuccessful()) {
-                    System.out.println(response.body().questions[0].question);
-                }
-            }
-
-            @Override
-            public void onFailure(Call<GetQuestionsPojo> call, Throwable t) {
-                System.out.println("ERROR");
+                finish();
             }
         });
     }
