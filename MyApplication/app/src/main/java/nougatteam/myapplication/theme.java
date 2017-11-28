@@ -35,29 +35,11 @@ public class theme extends AppCompatActivity {
         });
 
         final Button buttonTheme1 = (Button) findViewById(R.id.activity_game_theme1_btn);
-        buttonTheme1.setOnClickListener(new View.OnClickListener() {
-            public void onClick(View v) {
-                Intent instructionsActivity = new Intent(theme.this, instructions.class);
-                startActivity(instructionsActivity);
-            }
-        });
         final Button buttonTheme2 = (Button) findViewById(R.id.activity_game_theme2_btn);
-        buttonTheme2.setOnClickListener(new View.OnClickListener() {
-            public void onClick(View v) {
-                Intent instructionsActivity = new Intent(theme.this, instructions.class);
-                startActivity(instructionsActivity);
-            }
-        });
         final Button buttonTheme3 = (Button) findViewById(R.id.activity_game_theme3_btn);
-        buttonTheme3.setOnClickListener(new View.OnClickListener() {
-            public void onClick(View v) {
-                Intent instructionsActivity = new Intent(theme.this, instructions.class);
-                startActivity(instructionsActivity);
-            }
-        });
 
         Retrofit retrofit = new Retrofit.Builder()
-                .baseUrl("http://192.168.1.50:8080/api/")
+                .baseUrl("http://10.122.15.0:8080/api/")
                 .addConverterFactory(GsonConverterFactory.create())
                 .build();
 
@@ -78,6 +60,30 @@ public class theme extends AppCompatActivity {
                 System.out.println("ERROR");
             }
         });
+
+        buttonTheme1.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                Intent instructionsActivity = new Intent(theme.this, instructions.class);
+                instructionsActivity.putExtra("theme", buttonTheme1.getText().toString());
+                startActivity(instructionsActivity);
+                finish();
+            }
+        });
+
+        buttonTheme2.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                Intent instructionsActivity = new Intent(theme.this, instructions.class);
+                startActivity(instructionsActivity);
+            }
+        });
+
+        buttonTheme3.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                Intent instructionsActivity = new Intent(theme.this, instructions.class);
+                startActivity(instructionsActivity);
+            }
+        });
+
         // DEMO 3 QUESTIONS THEME HARRY POTTER
         Call<GetQuestionsPojo> questions = service.getQuestions("HarryPotter", 3);
         questions.enqueue(new Callback<GetQuestionsPojo>() {

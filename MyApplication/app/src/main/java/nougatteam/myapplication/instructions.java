@@ -24,11 +24,17 @@ public class instructions extends AppCompatActivity {
                 startActivity(homeActivity);
             }
         });
+
+        Intent myIntent = getIntent();
+        final String theme = myIntent.getStringExtra("theme");
+
         final Button buttonGo = (Button) findViewById(R.id.buttonGo);
         buttonGo.setOnClickListener(new View.OnClickListener() {
             public void onClick(View view) {
                 Intent quizzActivity = new Intent(instructions.this, quizz.class);
+                quizzActivity.putExtra("theme", theme);
                 startActivity(quizzActivity);
+                finish();
             }
         });
     }
