@@ -10,6 +10,7 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import nougatteam.myapplication.interfaces.GameService;
+import nougatteam.myapplication.pojo.GetQuestionsPojo;
 import nougatteam.myapplication.pojo.GetThemesPojo;
 import retrofit2.Call;
 import retrofit2.Callback;
@@ -56,7 +57,7 @@ public class theme extends AppCompatActivity {
         });
 
         Retrofit retrofit = new Retrofit.Builder()
-                .baseUrl("http://10.122.7.40:8080/api/")
+                .baseUrl("http://192.168.1.50:8080/api/")
                 .addConverterFactory(GsonConverterFactory.create())
                 .build();
 
@@ -74,6 +75,21 @@ public class theme extends AppCompatActivity {
 
             @Override
             public void onFailure(Call<GetThemesPojo> call, Throwable t) {
+                System.out.println("ERROR");
+            }
+        });
+        // DEMO 3 QUESTIONS THEME HARRY POTTER
+        Call<GetQuestionsPojo> questions = service.getQuestions("HarryPotter", 3);
+        questions.enqueue(new Callback<GetQuestionsPojo>() {
+            @Override
+            public void onResponse(Call<GetQuestionsPojo> call, Response<GetQuestionsPojo> response) {
+                if (response.isSuccessful()) {
+                    System.out.println(response.body().questions[0].question);
+                }
+            }
+
+            @Override
+            public void onFailure(Call<GetQuestionsPojo> call, Throwable t) {
                 System.out.println("ERROR");
             }
         });

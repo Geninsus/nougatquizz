@@ -1,10 +1,23 @@
 const jsonfile = require('jsonfile')
 var questions = {}
+var scores = {}
+
+function compareNumbers (a, b) {
+  return Number(a) - Number(b)
+}
 
 exports.init = () => {
   jsonfile.readFile('./questions.json', (err, data) => {
     if (!err) {
       questions = data
+    } else {
+      console.log(err)
+    }
+  })
+
+  jsonfile.readFile('./scores.json', (err, data) => {
+    if (!err) {
+      scores = data
     } else {
       console.log(err)
     }
@@ -44,6 +57,11 @@ exports.getRandomQuestions = async (categorie, count) => {
 }
 
 exports.getBestScores = async (count) => {
+  /* let avaliable = Object.keys(scores)
+  let tmp = []
+  let i = 0
+
+  console.log(avaliable.sort(compareNumbers)) */
   return 0
 }
 

@@ -23,7 +23,10 @@ router.get('/randomthemes/:count', (req, res, next) => {
 
 router.get('/randomquestions/:theme/:count', (req, res, next) => {
   db.getRandomQuestions(req.params.theme, req.params.count).then((val) => {
-    res.send(JSON.stringify(val))
+    let tmp = {
+      'questions': val
+    }
+    res.send(tmp)
   })
 })
 
