@@ -43,5 +43,10 @@ public class quizz extends AppCompatActivity {
             }
         }.start();
 
+        Intent myIntent = getIntent();
+        final String theme = myIntent.getStringExtra("theme");
+        final TextView questionField = (TextView) findViewById(R.id.question);
+        questionField.setText("question sur : " + theme);
+
     }
 }
