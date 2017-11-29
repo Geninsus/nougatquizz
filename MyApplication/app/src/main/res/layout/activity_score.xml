@@ -47,339 +47,64 @@
                 android:tint="#EBC153" />
         </LinearLayout>
 
-        <LinearLayout
-            android:layout_height="0dp"
+        <LinearLayout android:layout_height="0dp"
             android:layout_width="match_parent"
-            android:paddingLeft="15dp"
-            android:paddingRight="15dp"
-            android:paddingBottom="10dp"
-            android:paddingTop="10dp"
-            android:layout_weight="7"
+            android:layout_weight="1"
             android:orientation="horizontal">
 
-            <LinearLayout
-                android:id="@+id/rankLayout"
-                android:layout_height="match_parent"
+            <TextView
+                android:id="@+id/Ranking"
                 android:layout_width="0dp"
+                android:layout_height="match_parent"
                 android:layout_weight="1"
-                android:orientation="vertical">
+                android:gravity="center"
+                android:textSize="22sp"
+                android:text="Rank"
+                android:textColor="#EBC153"
+                android:textStyle="bold|italic"></TextView>
 
-                <TextView
-                    android:id="@+id/Ranking"
-                    android:layout_width="match_parent"
-                    android:layout_height="0dp"
-                    android:layout_weight="1"
-                    android:gravity="center"
-                    android:textSize="22sp"
-                    android:text="Rank"
-                    android:textColor="#EBC153"
-                    android:textStyle="bold|italic"></TextView>
-
-                <TextView
-                    android:id="@+id/firstOfList"
-                    android:layout_width="match_parent"
-                    android:layout_height="0dp"
-                    android:layout_weight="1"
-                    android:gravity="center"
-                    android:textSize="25sp"
-                    android:text="1."
-                    android:textColor="#EBC153"
-                    android:textStyle="bold|italic"></TextView>
-
-                <TextView
-                    android:id="@+id/secondOfList"
-                    android:layout_width="match_parent"
-                    android:layout_height="0dp"
-                    android:layout_weight="1"
-                    android:gravity="center"
-                    android:textSize="25sp"
-                    android:text="2."
-                    android:textColor="#EBC153"
-                    android:textStyle="bold|italic"></TextView>
-
-                <TextView
-                    android:id="@+id/thirdOfList"
-                    android:layout_width="match_parent"
-                    android:layout_height="0dp"
-                    android:layout_weight="1"
-                    android:gravity="center"
-                    android:textSize="25sp"
-                    android:text="3."
-                    android:textColor="#EBC153"
-                    android:textStyle="bold|italic"></TextView>
-
-                <TextView
-                    android:id="@+id/forthOfList"
-                    android:layout_width="match_parent"
-                    android:layout_height="0dp"
-                    android:layout_weight="1"
-                    android:gravity="center"
-                    android:textSize="25sp"
-                    android:text="4."
-                    android:textColor="#EBC153"
-                    android:textStyle="bold|italic"></TextView>
-
-                <TextView
-                    android:id="@+id/fifthOfList"
-                    android:layout_width="match_parent"
-                    android:layout_height="0dp"
-                    android:layout_weight="1"
-                    android:gravity="center"
-                    android:textSize="25sp"
-                    android:text="5."
-                    android:textColor="#EBC153"
-                    android:textStyle="bold|italic"></TextView>
-
-            </LinearLayout>
-
-            <LinearLayout
-                android:id="@+id/pseudoLayout"
-                android:layout_height="match_parent"
+            <TextView
+                android:id="@+id/Pseudo"
                 android:layout_width="0dp"
-                android:layout_weight="2"
-                android:orientation="vertical">
-
-                <TextView
-                    android:id="@+id/Pseudo"
-                    android:layout_width="match_parent"
-                    android:layout_height="0dp"
-                    android:layout_weight="1"
-                    android:gravity="center"
-                    android:textSize="22sp"
-                    android:text="Name"
-                    android:textColor="#EBC153"
-                    android:textStyle="bold|italic"></TextView>
-
-                <TextView
-                    android:id="@+id/firstPseudo"
-                    android:layout_width="match_parent"
-                    android:layout_height="0dp"
-                    android:layout_weight="1"
-                    android:gravity="center"
-                    android:textSize="25sp"
-                    android:text=""
-                    android:textColor="#EBC153"
-                    android:textStyle="bold|italic"></TextView>
-
-                <TextView
-                    android:id="@+id/secondPseudo"
-                    android:layout_width="match_parent"
-                    android:layout_height="0dp"
-                    android:layout_weight="1"
-                    android:gravity="center"
-                    android:textSize="25sp"
-                    android:text=""
-                    android:textColor="#EBC153"
-                    android:textStyle="bold|italic"></TextView>
-
-                <TextView
-                    android:id="@+id/thirdPseudo"
-                    android:layout_width="match_parent"
-                    android:layout_height="0dp"
-                    android:layout_weight="1"
-                    android:gravity="center"
-                    android:textSize="25sp"
-                    android:text=""
-                    android:textColor="#EBC153"
-                    android:textStyle="bold|italic"></TextView>
-
-                <TextView
-                    android:id="@+id/forthPseudo"
-                    android:layout_width="match_parent"
-                    android:layout_height="0dp"
-                    android:layout_weight="1"
-                    android:gravity="center"
-                    android:textSize="25sp"
-                    android:text=""
-                    android:textColor="#EBC153"
-                    android:textStyle="bold|italic"></TextView>
-
-                <TextView
-                    android:id="@+id/fifthPseudo"
-                    android:layout_width="match_parent"
-                    android:layout_height="0dp"
-                    android:layout_weight="1"
-                    android:gravity="center"
-                    android:textSize="25sp"
-                    android:text=""
-                    android:textColor="#EBC153"
-                    android:textStyle="bold|italic"></TextView>
-
-
-            </LinearLayout>
-
-            <LinearLayout
-                android:id="@+id/themeLayout"
                 android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:textSize="22sp"
+                android:text="Pseudo"
+                android:textColor="#EBC153"
+                android:textStyle="bold|italic"></TextView>
+
+            <TextView
+                android:id="@+id/Theme"
                 android:layout_width="0dp"
-                android:orientation="vertical"
-                android:layout_weight="2">
-
-                <TextView
-                    android:id="@+id/Theme"
-                    android:layout_height="0dp"
-                    android:layout_width="match_parent"
-                    android:layout_weight="1"
-                    android:gravity="center"
-                    android:text="Theme"
-                    android:textSize="22sp"
-                    android:textColor="@color/colorTextePrincipal"
-                    android:textStyle="bold|italic">
-                </TextView>
-
-                <TextView
-                    android:id="@+id/firstTheme"
-                    android:layout_height="0dp"
-                    android:layout_width="match_parent"
-                    android:layout_weight="1"
-                    android:gravity="center"
-                    android:text=""
-                    android:textSize="25sp"
-                    android:textColor="@color/colorTextePrincipal"
-                    android:textStyle="bold|italic">
-                </TextView>
-
-                <TextView
-                    android:id="@+id/secondTheme"
-                    android:layout_height="0dp"
-                    android:layout_width="match_parent"
-                    android:layout_weight="1"
-                    android:gravity="center"
-                    android:text=""
-                    android:textSize="25sp"
-                    android:textColor="@color/colorTextePrincipal"
-                    android:textStyle="bold|italic">
-                </TextView>
-
-                <TextView
-                    android:id="@+id/thirdTheme"
-                    android:layout_height="0dp"
-                    android:layout_width="match_parent"
-                    android:layout_weight="1"
-                    android:gravity="center"
-                    android:text=""
-                    android:textSize="25sp"
-                    android:textColor="@color/colorTextePrincipal"
-                    android:textStyle="bold|italic">
-                </TextView>
-
-                <TextView
-                    android:id="@+id/forthTheme"
-                    android:layout_height="0dp"
-                    android:layout_width="match_parent"
-                    android:layout_weight="1"
-                    android:gravity="center"
-                    android:text=""
-                    android:textSize="25sp"
-                    android:textColor="@color/colorTextePrincipal"
-                    android:textStyle="bold|italic">
-                </TextView>
-
-                <TextView
-                    android:id="@+id/fifthTheme"
-                    android:layout_height="0dp"
-                    android:layout_width="match_parent"
-                    android:layout_weight="1"
-                    android:gravity="center"
-                    android:text=""
-                    android:textSize="25sp"
-                    android:textColor="@color/colorTextePrincipal"
-                    android:textStyle="bold|italic">
-                </TextView>
-
-            </LinearLayout>
-
-            <LinearLayout
-                android:id="@+id/pointsLayout"
                 android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:textSize="22sp"
+                android:text="Theme"
+                android:textColor="#EBC153"
+                android:textStyle="bold|italic"></TextView>
+
+            <TextView
+                android:id="@+id/Score"
                 android:layout_width="0dp"
-                android:orientation="vertical"
-                android:layout_weight="1">
-
-                <TextView
-                    android:id="@+id/Points"
-                    android:layout_height="0dp"
-                    android:layout_width="match_parent"
-                    android:layout_weight="1"
-                    android:gravity="center"
-                    android:text="Point"
-                    android:textSize="22sp"
-                    android:textColor="@color/colorTextePrincipal"
-                    android:textStyle="bold|italic">
-                </TextView>
-
-                <TextView
-                    android:id="@+id/firstPoint"
-                    android:layout_height="0dp"
-                    android:layout_width="match_parent"
-                    android:layout_weight="1"
-                    android:gravity="center"
-                    android:text=""
-                    android:textSize="25sp"
-                    android:textColor="@color/colorTextePrincipal"
-                    android:textStyle="bold|italic">
-                </TextView>
-
-                <TextView
-                    android:id="@+id/secondPoint"
-                    android:layout_height="0dp"
-                    android:layout_width="match_parent"
-                    android:layout_weight="1"
-                    android:gravity="center"
-                    android:text=""
-                    android:textSize="25sp"
-                    android:textColor="@color/colorTextePrincipal"
-                    android:textStyle="bold|italic">
-                </TextView>
-
-                <TextView
-                    android:id="@+id/thirdPoint"
-                    android:layout_height="0dp"
-                    android:layout_width="match_parent"
-                    android:layout_weight="1"
-                    android:gravity="center"
-                    android:text=""
-                    android:textSize="25sp"
-                    android:textColor="@color/colorTextePrincipal"
-                    android:textStyle="bold|italic">
-                </TextView>
-
-                <TextView
-                    android:id="@+id/forthPoint"
-                    android:layout_height="0dp"
-                    android:layout_width="match_parent"
-                    android:layout_weight="1"
-                    android:gravity="center"
-                    android:text=""
-                    android:textSize="25sp"
-                    android:textColor="@color/colorTextePrincipal"
-                    android:textStyle="bold|italic">
-                </TextView>
-
-                <TextView
-                    android:id="@+id/fifthPoint"
-                    android:layout_height="0dp"
-                    android:layout_width="match_parent"
-                    android:layout_weight="1"
-                    android:gravity="center"
-                    android:text=""
-                    android:textSize="25sp"
-                    android:textColor="@color/colorTextePrincipal"
-                    android:textStyle="bold|italic">
-                </TextView>
-
-            </LinearLayout>
-
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:textSize="22sp"
+                android:text="Point"
+                android:textColor="#EBC153"
+                android:textStyle="bold|italic"></TextView>
 
 
         </LinearLayout>
 
-        <LinearLayout
-            android:id="@+id/pages"
+        <ListView
+            android:id="@+id/listScore"
             android:layout_height="0dp"
             android:layout_width="match_parent"
-            android:layout_weight="1"
-            android:orientation="horizontal"></LinearLayout>
+            android:layout_weight="7">
+        </ListView>
 
     </LinearLayout>
 
