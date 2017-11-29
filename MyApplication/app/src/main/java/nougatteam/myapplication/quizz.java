@@ -83,8 +83,10 @@ public class quizz extends AppCompatActivity {
                         }
 
                         public void onFinish() {
-                            Intent scoreActivity = new Intent(quizz.this, score.class);
-                            startActivity(scoreActivity);
+                            Intent endGameActivity = new Intent(quizz.this, endgame.class);
+                            endGameActivity.putExtra("score",score);
+                            endGameActivity.putExtra("theme",theme);
+                            startActivity(endGameActivity);
                             finish();
                         }
                     }.start();
