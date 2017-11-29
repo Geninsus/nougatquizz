@@ -55,7 +55,6 @@ public class quizz extends AppCompatActivity {
             public void onResponse(Call<GetQuestionsPojo> call, final Response<GetQuestionsPojo> response) {
                 if (response.isSuccessful()) {
                     final TextView mTextField = (TextView) findViewById(R.id.timeRemaining);
-                    changeQuestion(response.body(), 0);
 
                     final ProgressBar progressBar = (ProgressBar) findViewById(R.id.progressBar);
                     ObjectAnimator animation = ObjectAnimator.ofInt (progressBar, "progress", 0, 500); // see this max value coming back here, we animate towards that value
@@ -63,7 +62,7 @@ public class quizz extends AppCompatActivity {
                     animation.setInterpolator (new DecelerateInterpolator());
                     animation.start();
 
-                    new CountDownTimer(quizzDuration, 1000) {
+                    CountDownTimer theTimer = new CountDownTimer(quizzDuration, 1000) {
 
                         public void onTick(long millisUntilFinished) {
                             if (((millisUntilFinished / 1000)%60) < 10){
@@ -75,11 +74,14 @@ public class quizz extends AppCompatActivity {
 
                         public void onFinish() {
                             Intent endGameActivity = new Intent(quizz.this, endgame.class);
-                            endGameActivity.putExtra("score",score);
+                            endGameActivity.putExtra("score", score);
+                            endGameActivity.putExtra("theme", theme);
                             startActivity(endGameActivity);
                             finish();
                         }
                     }.start();
+
+                    changeQuestion(response.body(), 0, theTimer, theme);
                 }
             }
 
@@ -90,7 +92,7 @@ public class quizz extends AppCompatActivity {
         });
     }
 
-    public void checkAnswer(boolean answer, boolean real, GetQuestionsPojo questionObject, int i){
+    public void checkAnswer(boolean answer, boolean real, GetQuestionsPojo questionObject, int i, CountDownTimer theTimer, String theme){
         if (answer == real){
             score++;
             final TextView scoreText = (TextView) findViewById(R.id.scoreLeft);
@@ -98,16 +100,18 @@ public class quizz extends AppCompatActivity {
         }
         if (i+1 <= questionObject.questions.length-1){
             System.out.println(questionObject.questions.length);
-            changeQuestion(questionObject, i+1);
+            changeQuestion(questionObject, i+1, theTimer, theme);
         } else {
+            theTimer.cancel();
             Intent endGameActivity = new Intent(quizz.this, endgame.class);
             endGameActivity.putExtra("score",score);
+            endGameActivity.putExtra("theme", theme);
             startActivity(endGameActivity);
             finish();
         }
     }
 
-    public void changeQuestion(GetQuestionsPojo questionObjet, int j){
+    public void changeQuestion(GetQuestionsPojo questionObjet, int j, final CountDownTimer theTimer, final  String theme){
         final GetQuestionsPojo questionObject = questionObjet;
         final int i = j;
         final Button trueButton = (Button) findViewById(R.id.buttonTrue);
@@ -118,25 +122,25 @@ public class quizz extends AppCompatActivity {
         if (questionObject.questions[i].answer){
             trueButton.setOnClickListener(new View.OnClickListener() {
                 public void onClick(View v) {
-                    checkAnswer(true, true, questionObject, i);
+                    checkAnswer(true, true, questionObject, i, theTimer, theme);
                 }
             });
 
             falseButton.setOnClickListener(new View.OnClickListener() {
                 public void onClick(View v) {
-                    checkAnswer(false, true, questionObject, i);
+                    checkAnswer(false, true, questionObject, i, theTimer, theme);
                 }
             });
         } else {
             trueButton.setOnClickListener(new View.OnClickListener() {
                 public void onClick(View v) {
-                    checkAnswer(true, false, questionObject, i);
+                    checkAnswer(true, false, questionObject, i, theTimer, theme);
                 }
             });
 
             falseButton.setOnClickListener(new View.OnClickListener() {
                 public void onClick(View v) {
-                    checkAnswer(false, false, questionObject, i);
+                    checkAnswer(false, false, questionObject, i, theTimer, theme);
                 }
             });
         }
