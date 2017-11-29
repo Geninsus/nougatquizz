@@ -12,7 +12,15 @@ import android.widget.ListView;
 
 import java.util.ArrayList;
 
+import nougatteam.myapplication.interfaces.GameService;
+import nougatteam.myapplication.pojo.GetScoresPojo;
+import nougatteam.myapplication.pojo.GetThemesPojo;
 import nougatteam.myapplication.pojo.ScorePojo;
+import retrofit2.Call;
+import retrofit2.Callback;
+import retrofit2.Response;
+import retrofit2.Retrofit;
+import retrofit2.converter.gson.GsonConverterFactory;
 
 public class score extends Activity {
     ListView listView ;
@@ -23,7 +31,35 @@ public class score extends Activity {
         setContentView(R.layout.activity_score);
 
 
-        ArrayList<ScorePojo> arrayOfScores = new ArrayList<ScorePojo>();
+        Retrofit retrofit = new Retrofit.Builder()
+                .baseUrl("http://192.168.1.26:8080/api/")
+                .addConverterFactory(GsonConverterFactory.create())
+                .build();
+
+        final ArrayList<ScorePojo> arrayOfScores = new ArrayList<ScorePojo>();
+        GameService service = retrofit.create(GameService.class);
+        Call<GetScoresPojo> themes = service.getScores(20);
+        themes.enqueue(new Callback<GetScoresPojo>() {
+            @Override
+            public void onResponse(Call<GetScoresPojo> call, Response<GetScoresPojo> response) {
+                if (response.isSuccessful()) {
+                    ScorePojo score = new ScorePojo();
+                    for (int i =0; i<20;i++){
+                        score.name = response.body().scores[i].name;
+                        score.theme = response.body().scores[i].theme;
+                        score.name = response.body().scores[i].name;
+                        arrayOfScores.add(score);
+                    }
+                }
+            }
+
+            @Override
+            public void onFailure(Call<GetScoresPojo> call, Throwable t) {
+                System.out.println("ERROR");
+            }
+        });
+
+
         scoreAdapter adapter = new scoreAdapter(this, arrayOfScores);
         // Attach the adapter to a ListView
         listView = findViewById(R.id.listScore);
