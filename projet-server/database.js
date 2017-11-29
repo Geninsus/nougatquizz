@@ -87,6 +87,20 @@ exports.getBestScores = async (count) => {
   return tmp
 }
 
-exports.addScore = async (name, categorie, score) => {
-  return 0
+exports.addScore = async (name, categorie, score, count) => {
+  if (scores[score] == null) {
+    scores[score] = []
+  }
+  scores[score].push({
+    'name': name,
+    'theme': categorie
+  })
+
+  jsonfile.writeFile('./scores.json', scores, (err, res) => {
+    if (err) {
+      console.log(err)
+    }
+  })
+
+  return this.getBestScores(count)
 }
