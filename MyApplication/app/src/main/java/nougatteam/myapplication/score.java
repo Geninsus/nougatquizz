@@ -30,6 +30,17 @@ public class score extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_score);
 
+        getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,
+                WindowManager.LayoutParams.FLAG_FULLSCREEN);
+        setContentView(R.layout.activity_score);
+        final ImageView buttonHome = (ImageView) findViewById(R.id.homeIcon);
+        buttonHome.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                Intent homeActivity = new Intent(score.this, home.class);
+                startActivity(homeActivity);
+                finish();
+            }
+        });
 
         Retrofit retrofit = new Retrofit.Builder()
                 .baseUrl("http://192.168.1.26:8080/api/")
@@ -64,21 +75,6 @@ public class score extends Activity {
         // Attach the adapter to a ListView
         listView = findViewById(R.id.listScore);
         listView.setAdapter(adapter);
-
-
-
-
-        getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,
-                WindowManager.LayoutParams.FLAG_FULLSCREEN);
-        setContentView(R.layout.activity_score);
-        final ImageView buttonHome = (ImageView) findViewById(R.id.homeIcon);
-        buttonHome.setOnClickListener(new View.OnClickListener() {
-            public void onClick(View v) {
-                Intent homeActivity = new Intent(score.this, home.class);
-                startActivity(homeActivity);
-                finish();
-            }
-        });
 
 
 
