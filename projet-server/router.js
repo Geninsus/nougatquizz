@@ -32,13 +32,19 @@ router.get('/randomquestions/:theme/:count', (req, res, next) => {
 
 router.get('/scores/:count', (req, res, next) => {
   db.getBestScores(req.params.count).then((val) => {
-    res.send(val)
+    let tmp = {
+      'scores': val
+    }
+    res.send(tmp)
   })
 })
 
 router.post('/scores/:name/:theme/:score', (req, res, next) => {
-  db.addScore(req.params.name, req.params.theme, req.params.score).then((val) => {
-    res.send(JSON.stringify(val))
+  db.addScore(req.params.name, req.params.theme, req.params.score, req.params.count).then((val) => {
+    let tmp = {
+      'scores': val
+    }
+    res.send(tmp)
   })
 })
 
