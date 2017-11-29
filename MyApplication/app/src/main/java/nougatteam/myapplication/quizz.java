@@ -5,6 +5,7 @@ import android.content.Intent;
 import android.os.CountDownTimer;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.view.WindowManager;
 import android.view.animation.DecelerateInterpolator;
@@ -12,8 +13,11 @@ import android.widget.Button;
 import android.widget.ProgressBar;
 import android.widget.TextView;
 
+import org.w3c.dom.Text;
+
 import nougatteam.myapplication.interfaces.GameService;
 import nougatteam.myapplication.pojo.GetQuestionsPojo;
+import nougatteam.myapplication.pojo.QuestionPojo;
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
@@ -37,34 +41,21 @@ public class quizz extends AppCompatActivity {
 
         GameService service = retrofit.create(GameService.class);
 
-        final int quizzDuration = 20000;
-
-        final Button trueButton = (Button) findViewById(R.id.buttonTrue);
-        final Button falseButton = (Button) findViewById(R.id.buttonFalse);
+        final int quizzDuration = 30000;
 
         Intent myIntent = getIntent();
         final String theme = myIntent.getStringExtra("theme");
-        final TextView questionField = (TextView) findViewById(R.id.question);
 
-        Call<GetQuestionsPojo> questions = service.getQuestions(theme, 3);
+        final TextView scoreText = (TextView) findViewById(R.id.scoreLeft);
+        scoreText.setText("Score : " + score);
+
+        Call<GetQuestionsPojo> questions = service.getQuestions(theme, 0);
         questions.enqueue(new Callback<GetQuestionsPojo>() {
             @Override
             public void onResponse(Call<GetQuestionsPojo> call, final Response<GetQuestionsPojo> response) {
                 if (response.isSuccessful()) {
-                    questionField.setText(response.body().questions[0].question);
-                    trueButton.setOnClickListener(new View.OnClickListener() {
-                        public void onClick(View v) {
-                            checkAnswer(true, response.body().questions[0].answer, questionField);
-                        }
-                    });
-
-                    falseButton.setOnClickListener(new View.OnClickListener() {
-                        public void onClick(View v) {
-                            checkAnswer(false, response.body().questions[0].answer, questionField);
-                        }
-                    });
-
                     final TextView mTextField = (TextView) findViewById(R.id.timeRemaining);
+                    changeQuestion(response.body(), 0);
 
                     final ProgressBar progressBar = (ProgressBar) findViewById(R.id.progressBar);
                     ObjectAnimator animation = ObjectAnimator.ofInt (progressBar, "progress", 0, 500); // see this max value coming back here, we animate towards that value
@@ -85,7 +76,6 @@ public class quizz extends AppCompatActivity {
                         public void onFinish() {
                             Intent endGameActivity = new Intent(quizz.this, endgame.class);
                             endGameActivity.putExtra("score",score);
-                            endGameActivity.putExtra("theme",theme);
                             startActivity(endGameActivity);
                             finish();
                         }
@@ -100,13 +90,55 @@ public class quizz extends AppCompatActivity {
         });
     }
 
-    public void checkAnswer(boolean answer, boolean real, TextView questionText){
+    public void checkAnswer(boolean answer, boolean real, GetQuestionsPojo questionObject, int i){
         if (answer == real){
             score++;
-            questionText.setText("Bonne réponse +1");
+            final TextView scoreText = (TextView) findViewById(R.id.scoreLeft);
+            scoreText.setText("Score : " + score);
+        }
+        if (i+1 <= questionObject.questions.length-1){
+            System.out.println(questionObject.questions.length);
+            changeQuestion(questionObject, i+1);
         } else {
-            score++;
-            questionText.setText("Mauvaise réponse :/");
+            Intent endGameActivity = new Intent(quizz.this, endgame.class);
+            endGameActivity.putExtra("score",score);
+            startActivity(endGameActivity);
+            finish();
+        }
+    }
+
+    public void changeQuestion(GetQuestionsPojo questionObjet, int j){
+        final GetQuestionsPojo questionObject = questionObjet;
+        final int i = j;
+        final Button trueButton = (Button) findViewById(R.id.buttonTrue);
+        final Button falseButton = (Button) findViewById(R.id.buttonFalse);
+        final TextView questionField = (TextView) findViewById(R.id.question);
+        questionField.setText(questionObject.questions[i].question);
+
+        if (questionObject.questions[i].answer){
+            trueButton.setOnClickListener(new View.OnClickListener() {
+                public void onClick(View v) {
+                    checkAnswer(true, true, questionObject, i);
+                }
+            });
+
+            falseButton.setOnClickListener(new View.OnClickListener() {
+                public void onClick(View v) {
+                    checkAnswer(false, true, questionObject, i);
+                }
+            });
+        } else {
+            trueButton.setOnClickListener(new View.OnClickListener() {
+                public void onClick(View v) {
+                    checkAnswer(true, false, questionObject, i);
+                }
+            });
+
+            falseButton.setOnClickListener(new View.OnClickListener() {
+                public void onClick(View v) {
+                    checkAnswer(false, false, questionObject, i);
+                }
+            });
         }
     }
 }

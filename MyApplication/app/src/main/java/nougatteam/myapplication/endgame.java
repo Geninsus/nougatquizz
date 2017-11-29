@@ -8,6 +8,7 @@ import android.view.WindowManager;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
+import android.widget.TextView;
 
 public class endgame extends AppCompatActivity {
 
@@ -17,6 +18,11 @@ public class endgame extends AppCompatActivity {
         getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,
                 WindowManager.LayoutParams.FLAG_FULLSCREEN);
         setContentView(R.layout.activity_endgame);
+
+        Intent myIntent = getIntent();
+        int score = myIntent.getIntExtra("score", 0);
+        final TextView scoreText = (TextView) findViewById(R.id.score);
+        scoreText.setText(""+score);
 
         final Button replay = (Button) findViewById(R.id.restart);
         replay.setOnClickListener(new View.OnClickListener() {
@@ -37,9 +43,6 @@ public class endgame extends AppCompatActivity {
             }
         });
     }
-    Intent myIntent = getIntent();
-    final int score = Integer.parseInt(myIntent.getStringExtra("score"));
-    final String theme = myIntent.getStringExtra("theme");
 
 
     private void pushInfos() {
