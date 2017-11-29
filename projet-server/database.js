@@ -3,7 +3,7 @@ var questions = {}
 var scores = {}
 
 function compareNumbers (a, b) {
-  return Number(a) - Number(b)
+  return Number(b) - Number(a)
 }
 
 function shuffleArray (array) {
@@ -71,12 +71,20 @@ exports.getRandomQuestions = async (categorie, count) => {
 }
 
 exports.getBestScores = async (count) => {
-  /* let avaliable = Object.keys(scores)
+  let avaliable = Object.keys(scores).sort(compareNumbers)
   let tmp = []
   let i = 0
 
-  console.log(avaliable.sort(compareNumbers)) */
-  return 0
+  avaliable.forEach((item) => {
+    scores[item].forEach((score) => {
+      if (i < count) {
+        score.score = item
+        tmp.push(score)
+        i++
+      }
+    })
+  })
+  return tmp
 }
 
 exports.addScore = async (name, categorie, score) => {

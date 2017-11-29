@@ -32,7 +32,7 @@ router.get('/randomquestions/:theme/:count', (req, res, next) => {
 
 router.get('/scores/:count', (req, res, next) => {
   db.getBestScores(req.params.count).then((val) => {
-    res.send(JSON.stringify(val))
+    res.send(val)
   })
 })
 
