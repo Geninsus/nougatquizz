@@ -53,25 +53,30 @@ public class score extends Activity {
 
         /* Connection to the DB */
         Retrofit retrofit = new Retrofit.Builder()
-                .baseUrl("http://10.122.15.0:8080/api/")
+                .baseUrl("http://192.168.43.188:8080/api/")
                 .addConverterFactory(GsonConverterFactory.create())
                 .build();
 
         /* Getting the scores */
         final ArrayList<ScorePojo> arrayOfScores = new ArrayList<ScorePojo>();
         GameService service = retrofit.create(GameService.class);
-        Call<GetScoresPojo> scores = service.getScores(20);
+        Call<GetScoresPojo> scores = service.getScores(5);
         scores.enqueue(new Callback<GetScoresPojo>() {
             @Override
             public void onResponse(Call<GetScoresPojo> call, Response<GetScoresPojo> response) {
                 if (response.isSuccessful()) {
                     /* creating the array with ScorePojo */
                     ScorePojo score = new ScorePojo();
-                    for (int i =0; i<20;i++){
+                    int i = 0;
+                    while (i <= response.body().scores.length-1){
                         score.name = response.body().scores[i].name;
+                        System.out.println(score.name);
                         score.theme = response.body().scores[i].theme;
-                        score.name = response.body().scores[i].name;
+                        System.out.println(score.theme);
+                        score.score = response.body().scores[i].score;
+                        System.out.println(score.score);
                         arrayOfScores.add(score);
+                        i++;
                     }
                 }
             }
