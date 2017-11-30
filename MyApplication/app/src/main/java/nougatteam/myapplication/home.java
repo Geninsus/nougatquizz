@@ -19,6 +19,8 @@ public class home extends AppCompatActivity {
         getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,
                 WindowManager.LayoutParams.FLAG_FULLSCREEN);
         setContentView(R.layout.activity_home);
+
+        /* Button Navigation Settings */
         final ImageView buttonScore = (ImageView) findViewById(R.id.scoreIcon);
         buttonScore.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
@@ -27,6 +29,17 @@ public class home extends AppCompatActivity {
                 finish();
             }
         });
+        final ImageView buttonSettings = (ImageView) findViewById(R.id.settingsIcon);
+        buttonScore.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                /* Implement fragment */
+            }
+        });
+        /* End Button Navigation */
+
+
+
+        /* Tap to play */
         final LinearLayout zoneTap1 = (LinearLayout) findViewById(R.id.zoneTap1);
         zoneTap1.setOnClickListener(new View.OnClickListener() {
             public void onClick(View view) {

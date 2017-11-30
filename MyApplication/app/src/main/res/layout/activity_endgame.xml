@@ -7,7 +7,15 @@
     tools:context="nougatteam.myapplication.endgame"
     android:background="@color/colorBluePrincipal">
 
+    <FrameLayout
+        android:id="@+id/fragmentLayout"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content">
+
+    </FrameLayout>
+
     <LinearLayout
+        android:id="@+id/layout"
         android:layout_height="match_parent"
         android:layout_width="match_parent"
         android:orientation="vertical">
@@ -19,12 +27,12 @@
             android:layout_weight="1">
 
             <ImageView
-                android:id="@+id/pauseIcon"
+                android:id="@+id/homeIcon"
                 android:layout_width="0dp"
                 android:layout_height="35sp"
                 android:layout_weight="1"
                 android:layout_gravity="center"
-                android:src="@drawable/pause"
+                android:src="@drawable/home_icon"
                 android:tint="#EBC153"/>
 
             <TextView

@@ -17,6 +17,8 @@ public class instructions extends AppCompatActivity {
         getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,
                 WindowManager.LayoutParams.FLAG_FULLSCREEN);
         setContentView(R.layout.activity_instructions);
+
+        /* Button Navigation Settings */
         final ImageView buttonHome = (ImageView) findViewById(R.id.homeIcon);
         buttonHome.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
@@ -26,9 +28,20 @@ public class instructions extends AppCompatActivity {
             }
         });
 
+        final ImageView buttonSettings = (ImageView) findViewById(R.id.settingsIcon);
+        buttonSettings.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                /* Implement fragment */
+            }
+        });
+        /* End Button Navigation */
+
+        /* Get the theme choosen before */
         Intent myIntent = getIntent();
         final String theme = myIntent.getStringExtra("theme");
 
+
+        /* Start game button */
         final Button buttonGo = (Button) findViewById(R.id.buttonGo);
         buttonGo.setOnClickListener(new View.OnClickListener() {
             public void onClick(View view) {

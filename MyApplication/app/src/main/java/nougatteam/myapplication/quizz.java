@@ -10,6 +10,7 @@ import android.view.View;
 import android.view.WindowManager;
 import android.view.animation.DecelerateInterpolator;
 import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.ProgressBar;
 import android.widget.TextView;
 
@@ -39,23 +40,43 @@ public class quizz extends AppCompatActivity {
                 .addConverterFactory(GsonConverterFactory.create())
                 .build();
 
-        GameService service = retrofit.create(GameService.class);
+        /* Button Navigation Settings */
+        final ImageView buttonPause = (ImageView) findViewById(R.id.pauseIcon);
+        buttonPause.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+               /* Handle pause */
+            }
+        });
 
-        final int quizzDuration = 30000;
+        final ImageView buttonSettings = (ImageView) findViewById(R.id.settingsIcon);
+        buttonSettings.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                /* Implement fragment */
+            }
+        });
+        /* End Button Navigation */
 
+        /* Set the game duration */
+        final int quizzDuration = 10000;
+
+        /* Get the theme choosen */
         Intent myIntent = getIntent();
         final String theme = myIntent.getStringExtra("theme");
 
+        /* Initiate the score to zero */
         final TextView scoreText = (TextView) findViewById(R.id.scoreLeft);
         scoreText.setText("Score : " + score);
 
+        GameService service = retrofit.create(GameService.class);
+        /* Get Questions by theme */
         Call<GetQuestionsPojo> questions = service.getQuestions(theme, 0);
         questions.enqueue(new Callback<GetQuestionsPojo>() {
             @Override
             public void onResponse(Call<GetQuestionsPojo> call, final Response<GetQuestionsPojo> response) {
                 if (response.isSuccessful()) {
-                    final TextView mTextField = (TextView) findViewById(R.id.timeRemaining);
 
+                    final TextView mTextField = (TextView) findViewById(R.id.timeRemaining);
+                    /* Start the progress bar for time */
                     final ProgressBar progressBar = (ProgressBar) findViewById(R.id.progressBar);
                     ObjectAnimator animation = ObjectAnimator.ofInt (progressBar, "progress", 0, 500); // see this max value coming back here, we animate towards that value
                     animation.setDuration (quizzDuration); //in milliseconds
@@ -71,7 +92,7 @@ public class quizz extends AppCompatActivity {
                                 mTextField.setText((millisUntilFinished / 1000)/60 + ":" + (millisUntilFinished / 1000)%60);
                             }
                         }
-
+                        /* On finish we send the score and theme to endGame activity */
                         public void onFinish() {
                             Intent endGameActivity = new Intent(quizz.this, endgame.class);
                             endGameActivity.putExtra("score", score);
