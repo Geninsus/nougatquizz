@@ -31,6 +31,70 @@
     {
       "question":"Les dauphins dorment une moitié du cerveau à la fois.",
       "answer":true
+    },
+    {
+      "question":"Les dauphins roses vivent près de l’Antarctique.",
+      "answer":false
+    },
+    {
+      "question":"Le plus petit dauphin du monde est menacé d’extinction.",
+      "answer":true
+    },
+    {
+      "question":"On ne trouve pas de grands dauphins (dauphins souffleurs) dans la mer Méditerranée.",
+      "answer":false
+    },
+    {
+      "question":"Le dauphin de Risso vit surtout près de la surface de l’eau.",
+      "answer":false
+    },
+    {
+      "question":"Les dauphins se fient beaucoup à leur odorat.",
+      "answer":false
+    },
+    {
+      "question":"Le dauphin entend les ultrasons avec sa mâchoire.",
+      "answer":true
+    },
+    {
+      "question":"Le dauphin de l’Irrawaddy vit aussi bien dans l’eau douce que dans l’eau salée.",
+      "answer":true
+    },
+    {
+      "question":"Les épaulards sont les plus gros animaux à chasser en groupes.",
+      "answer":true
+    },
+    {
+      "question":"Lorsque son évent lui cause des problèmes, le dauphin peut respirer par le museau.",
+      "answer":false
+    },
+    {
+      "question":"Les dauphins s’identifient par leur nom.",
+      "answer":true
+    },
+    {
+      "question":"Le sel de mer peut rendre les dauphins aveugles.",
+      "answer":false
+    },
+    {
+      "question":"Le dauphin tacheté de l’Atlantique vit dans les mers froides près de l’Arctique.",
+      "answer":false
+    },
+    {
+      "question":"L’épaulard (orque) est deux fois plus gros qu’un éléphant.",
+      "answer":true
+    },
+    {
+      "question":"Le dauphin à long bec et l’épaulard parviennent tous les deux à bondir à plus de 7 m (23 pi) hors de l’eau.",
+      "answer":true
+    },
+    {
+      "question":"Le boto (Inia geoffrensis) vit dans le fleuve Amazone.",
+      "answer":true
+    },
+    {
+      "question":"Les dauphins peuvent nager à la vitesse de 40 km/h (25 mi/h).",
+      "answer":true
     }
   ],
   "Chiens":[
@@ -65,6 +129,70 @@
     {
       "question":"Le basenji n’aboie pas.",
       "answer":true
+    },
+    {
+      "question":"Les chiens ne voient qu’en noir et blanc.",
+      "answer":false
+    },
+    {
+      "question":"Les chiens ont plus d’os que les humains.",
+      "answer":true
+    },
+    {
+      "question":"Il existe plus de 330 races de chiens dans le monde.",
+      "answer":true
+    },
+    {
+      "question":"Le lhassa apso était utilisé comme gardien par les moines.",
+      "answer":true
+    },
+    {
+      "question":"La première domestication d’un loup remonte à 3000 ans.",
+      "answer":false
+    },
+    {
+      "question":"Les lévriers peuvent courir à 72,5 km/h (45 mi/h).",
+      "answer":true
+    },
+    {
+      "question":"Le chocolat peut être dangereux pour les chiens.",
+      "answer":true
+    },
+    {
+      "question":"Les carlins étaient les chiens favoris des rois aztèques.",
+      "answer":false
+    },
+    {
+      "question":"Jules César aimait être entouré de dobermans.",
+      "answer":false
+    },
+    {
+      "question":"Les chiens ont des glandes sudoripares sous leurs pattes.",
+      "answer":true
+    },
+    {
+      "question":"Trois des 12 chiens présents sur le Titanic ont survécu au naufrage.",
+      "answer":true
+    },
+    {
+      "question":"Le Doberman tient son nom d’une personne.",
+      "answer":true
+    },
+    {
+      "question":"L’omoplate d’un chien est solidement attachée au reste du squelette.",
+      "answer":false
+    },
+    {
+      "question":"Il y a environ 40 millions de chiens domestiques dans le monde.",
+      "answer":false
+    },
+    {
+      "question":"La race de chiens sauvages dingos vit principalement dans le sud de l’Afrique.",
+      "answer":false
+    },
+    {
+      "question":"L’ADN des chiens est à 84 % similaire à celui des loups gris.",
+      "answer":false
     }
   ],
   "Bière":[
@@ -99,6 +227,70 @@
     {
       "question":"Dans l’Empire romain, la bière était réservée aux nobles.",
       "answer":false
+    },
+    {
+      "question":"Louis Pasteur a joué un rôle important dans la stabilisation du goût de la bière.",
+      "answer":true
+    },
+    {
+      "question":"Guinness a déjà publié une campagne publicitaire qui vantait les bienfaits de ses bières pour la santé.",
+      "answer":true
+    },
+    {
+      "question":"La brasserie Heineken est d’origine néerlandaise.",
+      "answer":true
+    },
+    {
+      "question":"La fermentation basse se produit autour de 2 à 5 °C (35,6 à 41 °F).",
+      "answer":false
+    },
+    {
+      "question":"Au 17e siècle, les pères jésuites du Canada ont interdit la fabrication de la bière.",
+      "answer":false
+    },
+    {
+      "question":"Le degré d’alcool n’a aucun impact sur la couleur d’une bière.",
+      "answer":true
+    },
+    {
+      "question":"Le houblon était utilisé par les Sumériens dans la fabrication des premières bières.",
+      "answer":false
+    },
+    {
+      "question":"La brasserie Guinness a vu le jour à Glasgow, en Écosse.",
+      "answer":false
+    },
+    {
+      "question":"La fermentation haute permet d’obtenir un plus haut niveau d’alcool que la fermentation basse.",
+      "answer":true
+    },
+    {
+      "question":"Les premières traces de bière remontent à la Grèce antique.",
+      "answer":false
+    },
+    {
+      "question":"L’Oktoberfest (« fête d’octobre » en allemand) est une fête de la bière qui se déroule à Berlin.",
+      "answer":false
+    },
+    {
+      "question":"Plusieurs personnes sont mortes noyées à Londres durant une inondation de bière.",
+      "answer":true
+    },
+    {
+      "question":"Il faut absolument ajouter du sucre au moût pour obtenir de la bière.",
+      "answer":false
+    },
+    {
+      "question":"Le seigle a servi à la fabrication des premières bières chez les Sumériens.",
+      "answer":false
+    },
+    {
+      "question":"Chez les Gaulois, les druides étaient responsables de la préparation de la cervoise (bière).",
+      "answer":false
+    },
+    {
+      "question":"Le houblon est le grand responsable de l’amertume de la bière.",
+      "answer":true
     }
   ],
   "Fleurs":[
@@ -132,6 +324,70 @@
     },
     {
       "question":"Il faut 10 fleurs de crocus pour produire 1 g de safran.",
+      "answer":false
+    },
+    {
+      "question":"Les papillons monarques pondent leurs œufs exclusivement sur des asclépiades.",
+      "answer":true
+    },
+    {
+      "question":"L’artiste Vincent van Gogh a peint environ 250 tableaux ayant pour thème les nénuphars.",
+      "answer":false
+    },
+    {
+      "question":"Le tournesol peut atteindre 3 m (10 pi) de hauteur.",
+      "answer":true
+    },
+    {
+      "question":"Entre l’âge de 40 et 80 ans, le talipot fleurit une seule fois, puis il meurt.",
+      "answer":true
+    },
+    {
+      "question":"Pour produire 1 kg (2,2 lb) de miel, les abeilles doivent butiner plus de 4 millions de fleurs.",
+      "answer":true
+    },
+    {
+      "question":"L’artichaut produit de petites fleurs jaunes.",
+      "answer":false
+    },
+    {
+      "question":"Cosmos atrosanguineus dégage une odeur de chocolat.",
+      "answer":true
+    },
+    {
+      "question":"Le trèfle fleuri est le symbole de l’Écosse.",
+      "answer":false
+    },
+    {
+      "question":"En 1637, le prix d’un bulbe d’une tulipe équivalait à 10 fois le salaire annuel d’un ouvrier.",
+      "answer":true
+    },
+    {
+      "question":"Chaque année, les roses fleurissent avant les lilas.",
+      "answer":false
+    },
+    {
+      "question":"Le rafflesia peut peser 10 kg (22 lb).",
+      "answer":true
+    },
+    {
+      "question":"La corolle est le nom donné à l’ensemble des pétales sur une fleur.",
+      "answer":true
+    },
+    {
+      "question":"Les roses bleues existent à l’état naturel.",
+      "answer":false
+    },
+    {
+      "question":"L’arum titan exhale une forte odeur de viande avariée perceptible à près de 1 km (0,6 mi) de distance.",
+      "answer":true
+    },
+    {
+      "question":"Le pétunia est originaire d’Amérique du Sud.",
+      "answer":true
+    },
+    {
+      "question":"Il existe environ 15 espèces d’impatientes.",
       "answer":false
     }
   ],
@@ -167,6 +423,70 @@
     {
       "question":"La colonie de Virginie a été la première colonie permanente à l’origine des États-Unis.",
       "answer":true
+    },
+    {
+      "question":"L’Alaska est le dernier État à avoir joint les États-Unis (le 3 janvier 1959).",
+      "answer":false
+    },
+    {
+      "question":"Le Rhode Island est l’État le plus petit et aussi le moins peuplé des États-Unis.",
+      "answer":false
+    },
+    {
+      "question":"La Seconde Guerre mondiale a été la guerre la plus meurtrière pour les États‑Unis.",
+      "answer":false
+    },
+    {
+      "question":"« Le mardi noir » est le nom donné au pire déversement de pétrole à New York.",
+      "answer":false
+    },
+    {
+      "question":"Les États-Unis ont acheté l’Alaska à la Russie.",
+      "answer":true
+    },
+    {
+      "question":"Après la Chine, les États-Unis sont le pays le plus populeux.",
+      "answer":false
+    },
+    {
+      "question":"Jackie Robinson a été le premier Afro-Américain à jouer dans la Ligue nationale de baseball.",
+      "answer":true
+    },
+    {
+      "question":"Le bateau qui a transporté les premiers colons s’appelait le Mayflower.",
+      "answer":true
+    },
+    {
+      "question":"Le président John F. Kennedy a été assassiné à Austin, Texas.",
+      "answer":false
+    },
+    {
+      "question":"Le mont Rushmore se trouve dans l’État de l’Arizona, à l’extrémité nord du Grand Canyon.",
+      "answer":false
+    },
+    {
+      "question":"Hawaï est plus près du Japon que des États-Unis.",
+      "answer":false
+    },
+    {
+      "question":"En 1963, l’activiste Martin Luther King prononce « I have a dream » (J’ai un rêve), l’un des plus grands discours du 20e siècle.",
+      "answer":true
+    },
+    {
+      "question":"Jesse Owens a remporté 4 médailles d’or devant Hitler.",
+      "answer":true
+    },
+    {
+      "question":"La Déclaration d’indépendance des États-Unis remonte au 14 juillet 1831.",
+      "answer":false
+    },
+    {
+      "question":"Le Watergate, le scandale d’eau contaminée, a mené à la démission du président Nixon.",
+      "answer":false
+    },
+    {
+      "question":"En incluant les territoires dépendants, les États-Unis couvrent 8 fuseaux horaires.",
+      "answer":false
     }
   ],
   "Titanic":[
@@ -200,6 +520,70 @@
     },
     {
       "question":"La cave à vin du Titanic comptait plus de 20 000 bouteilles de bière.",
+      "answer":true
+    },
+    {
+      "question":"L’Olympic, le navire-jumeau du Titanic, a coulé peu de temps après le Titanic.",
+      "answer":false
+    },
+    {
+      "question":"Le Titanic imprimait son propre journal.",
+      "answer":true
+    },
+    {
+      "question":"En proportion, les hommes sont morts en plus grand nombre que les femmes.",
+      "answer":true
+    },
+    {
+      "question":"Le nombre insuffisant de canots de sauvetage à bord du Titanic était en violation avec les lois de l’époque.",
+      "answer":false
+    },
+    {
+      "question":"Le Titanic devait relier les villes de Londres – Lisbonne – New York.",
+      "answer":false
+    },
+    {
+      "question":"Lors de l’impact, le capitaine croyait à une collision avec une baleine.",
+      "answer":false
+    },
+    {
+      "question":"Environ 98 % des passagers et membres d’équipage du Titanic sont décédés.",
+      "answer":false
+    },
+    {
+      "question":"La panique et le manque de préparation de l’équipage expliquent les canots de sauvetage à moitié-vides.",
+      "answer":true
+    },
+    {
+      "question":"Le Titanic a coulé près des Açores, dans une région de l’Atlantique où il y a peu d’icebergs.",
+      "answer":false
+    },
+    {
+      "question":"En janvier 2015, trois survivants du naufrage étaient encore vivants.",
+      "answer":false
+    },
+    {
+      "question":"Plus 100 000 spectateurs ont assisté à la mise à l’eau du Titanic.",
+      "answer":true
+    },
+    {
+      "question":"Le Titanic avait innové en interdisant de fumer dans les espaces communs.",
+      "answer":false
+    },
+    {
+      "question":"Quatorze ans avant le naufrage, l’auteur Morgan Robertson a écrit un roman prémonitoire : « Le Naufrage du Titan ».",
+      "answer":true
+    },
+    {
+      "question":"Le Titanic n’a pas été baptisé avec une bouteille, mais avec 100 bouteilles de champagne.",
+      "answer":false
+    },
+    {
+      "question":"Au moins huit ouvriers sont morts durant la construction du Titanic.",
+      "answer":true
+    },
+    {
+      "question":"L’assemblage du Titanic a nécessité plus de 3 millions de rivets.",
       "answer":true
     }
   ],
@@ -235,6 +619,70 @@
     {
       "question":"La rougeole tue majoritairement des personnes âgées.",
       "answer":false
+    },
+    {
+      "question":"Le cyclone de Bhola coûta la vie à 500 000 personnes en 1970.",
+      "answer":true
+    },
+    {
+      "question":"Le paludisme (ou malaria), qui tue entre 1 et 2 millions de personnes chaque année, est transmis par piqûre d’insecte.",
+      "answer":true
+    },
+    {
+      "question":"Le 12 août 2000, le sous-marin nucléaire K-141 Koursk disparaissait dans la mer de Barents avec ses missiles et 118 marins.",
+      "answer":true
+    },
+    {
+      "question":"Chaque année, la grippe (influenza) tue 20 000 personnes dans le monde.",
+      "answer":false
+    },
+    {
+      "question":"La catastrophe de Bhopal est un glissement de terrain qui a enseveli tout un village en Inde.",
+      "answer":false
+    },
+    {
+      "question":"La tuberculose, l’un des plus grands tueurs de l’histoire, a officiellement été éradiquée en 2008.",
+      "answer":false
+    },
+    {
+      "question":"En 1556, le tremblement de terre de Shaanxi, en Chine, est le séisme le plus meurtrier de l’histoire.",
+      "answer":true
+    },
+    {
+      "question":"La Grande Famine irlandaise (1845 à 1852) a été causée par un insecte parasite du blé.",
+      "answer":false
+    },
+    {
+      "question":"Les deux pires accidents nucléaires, à Fukushima (Japon) et Tchernobyl (Union soviétique), ont été causés par la même erreur informatique.",
+      "answer":false
+    },
+    {
+      "question":"Il n’y a eu que trois survivants au naufrage du Titanic.",
+      "answer":true
+    },
+    {
+      "question":"En 2010, le nuage de cendre projeté par le volcan islandais Eyjafjöll a provoqué l’accident le plus meurtrier de l’aviation commerciale.",
+      "answer":false
+    },
+    {
+      "question":"Le 29 mai 1914, l’Empress of Ireland devient le premier paquebot civil coulé par un sous-marin en temps de guerre.",
+      "answer":false
+    },
+    {
+      "question":"Le 25 juillet 2000, le Concorde s’est écrasé sur un hôtel à Gonesse.",
+      "answer":true
+    },
+    {
+      "question":"En 2014, l’épidémie d’Ebola a fait 80 000 morts.",
+      "answer":false
+    },
+    {
+      "question":"La catastrophe écologique du pétrolier Exxon Valdez est survenue parce que son capitaine était ivre.",
+      "answer":true
+    },
+    {
+      "question":"Le grand incendie de Rome détruisit la ville en l’an 64, mais fit très peu de victimes.",
+      "answer":false
     }
   ],
   "FootBall":[
@@ -269,6 +717,70 @@
     {
       "question":"En 1986, le brio de Diego Maradona a permis au Brésil de remporter la Coupe du monde.",
       "answer":false
+    },
+    {
+      "question":"En 2006, Lionel Messi a aidé l’Argentine à remporter la Coupe du monde de football.",
+      "answer":false
+    },
+    {
+      "question":"Avec 13 buts, Just Fontaine détient le record du plus grand nombre de buts marqués au cours d’un seul tournoi.",
+      "answer":true
+    },
+    {
+      "question":"Oleg Salenko a marqué 5 buts dans un match de la Coupe du monde de football.",
+      "answer":true
+    },
+    {
+      "question":"Aucun gardien n’a remporté le titre de meilleur joueur du tournoi de la Coupe du monde de football.",
+      "answer":false
+    },
+    {
+      "question":"Le Turc Hakan Şükür a marqué un but à 11 secondes du début d’un match.",
+      "answer":true
+    },
+    {
+      "question":"Le tout premier but de la Coupe du monde a été marqué par un Français.",
+      "answer":true
+    },
+    {
+      "question":"Le Brésil détient le record du pays organisateur ayant encaissé le plus grand nombre de buts en un match.",
+      "answer":true
+    },
+    {
+      "question":"En 1942, durant la Seconde Guerre mondiale, la Coupe du monde a eu lieu en Argentine, un pays épargné par le conflit.",
+      "answer":false
+    },
+    {
+      "question":"Le record d’assistance à un match de la Coupe du monde est de 101 000 personnes.",
+      "answer":false
+    },
+    {
+      "question":"En 2002 et 2003, les équipes masculines et féminines du Brésil ont remporté les deux Coupes du monde de football.",
+      "answer":false
+    },
+    {
+      "question":"En 1983, le premier trophée de la Coupe du monde a été volé et n’a jamais été retrouvé.",
+      "answer":true
+    },
+    {
+      "question":"L’Angleterre a gagné deux fois la Coupe du monde.",
+      "answer":false
+    },
+    {
+      "question":"Pendant la Seconde Guerre mondiale, un Italien a caché le trophée de la Coupe sous un lit pour éviter qu’il ne soit volé par les nazis.",
+      "answer":true
+    },
+    {
+      "question":"Pelé est le seul footballeur à avoir été champion du monde à trois reprises.",
+      "answer":true
+    },
+    {
+      "question":"La dernière Coupe du monde (2014) a été remportée par le Brésil.",
+      "answer":false
+    },
+    {
+      "question":"Seules huit nations ont remporté la Coupe du monde de football depuis sa fondation en 1930.",
+      "answer":true
     }
   ],
   "Ordinateur":[
@@ -302,6 +814,70 @@
     },
     {
       "question":"Le premier nom de Pac-Man était Puckman.",
+      "answer":true
+    },
+    {
+      "question":"L’IBM PC, le premier ordinateur personnel d’IBM, offrait 16 ko de mémoire vive.",
+      "answer":true
+    },
+    {
+      "question":"En 1953, le premier ordinateur d’IBM se louait plus de 8000 $ par mois.",
+      "answer":true
+    },
+    {
+      "question":"En 1993, le navigateur Mosaic innove en affichant du texte et des images.",
+      "answer":true
+    },
+    {
+      "question":"Apple a mis en marché son premier iPad en 2005.",
+      "answer":false
+    },
+    {
+      "question":"Plus de 200 millions d’email sont envoyés chaque minute dans le monde.",
+      "answer":true
+    },
+    {
+      "question":"Le PDP-8, le premier mini-ordinateur, pesait plus de 45 kg (100 lb).",
+      "answer":true
+    },
+    {
+      "question":"Le premier Newton affichait des pages en couleur.",
+      "answer":false
+    },
+    {
+      "question":"À l’origine, le langage BASIC s’adressait aux programmeurs chevronnés.",
+      "answer":false
+    },
+    {
+      "question":"Le bogue de l’an 2000 découlait d’une erreur dans l’assemblage des transistors des ordinateurs IBM.",
+      "answer":false
+    },
+    {
+      "question":"Le boulier permet de calculer des racines carrées et cubiques.",
+      "answer":true
+    },
+    {
+      "question":"On doit le @ dans les adresses courriel (emails) à une faute de frappe.",
+      "answer":false
+    },
+    {
+      "question":"Le premier jeu vidéo ayant connu un véritable succès s’appelait « bong ».",
+      "answer":false
+    },
+    {
+      "question":"Le Commodore 64 est l’ordinateur de bureau le plus vendu au monde.",
+      "answer":true
+    },
+    {
+      "question":"À ses débuts, le producteur de films d’animation Pixar fabriquait des ordinateurs pour le secteur médical.",
+      "answer":true
+    },
+    {
+      "question":"L’Osborne 1, l’un des premiers ordinateurs portatifs, avait une mémoire vive de 64 ko.",
+      "answer":true
+    },
+    {
+      "question":"Le magazine Time a nommé « l’ordinateur » personnalité de l’année en 1982.",
       "answer":true
     }
   ],
@@ -337,6 +913,70 @@
     {
       "question":"La vallée de Napa est située dans le nord de l’Italie.",
       "answer":false
+    },
+    {
+      "question":"Le vin rouge doit fermenter à une température de 40 à 50 °C (104 à 122 °F).",
+      "answer":false
+    },
+    {
+      "question":"Ce sont des bactéries qui assurent la fermentation alcoolique des raisins.",
+      "answer":false
+    },
+    {
+      "question":"Le muselet sert à sceller le bouchon pour éviter que l’oxygène ambiant contamine le champagne.",
+      "answer":false
+    },
+    {
+      "question":"Une teinte violacée dans un vin rouge indique que le vin arrive à maturité.",
+      "answer":false
+    },
+    {
+      "question":"Le véritable vin rosé est un mélange contenant 4/5 de vin blanc et 1/5 de vin rouge.",
+      "answer":false
+    },
+    {
+      "question":"Un baril de chêne standard contient environ 225 litres (59,4 gallons) de vin.",
+      "answer":true
+    },
+    {
+      "question":"Il y a en moyenne 100 000 bulles dans une bouteille de champagne.",
+      "answer":false
+    },
+    {
+      "question":"Au fil du temps, le vin rouge pâlit et le vin blanc devient plus foncé.",
+      "answer":true
+    },
+    {
+      "question":"La France est le pays où l’on consomme le plus de vin.",
+      "answer":false
+    },
+    {
+      "question":"Le vin sec a une teneur en sucre très faible.",
+      "answer":true
+    },
+    {
+      "question":"Le merlot est le cépage rouge le plus cultivé dans le monde.",
+      "answer":true
+    },
+    {
+      "question":"Jules César adorait le champagne.",
+      "answer":false
+    },
+    {
+      "question":"On ajoute de l’alcool à 70 % ou 90 % à un vin en fermentation pour obtenir du porto.",
+      "answer":true
+    },
+    {
+      "question":"Durant la prohibition aux États-Unis, le vin était permis, mais pas la bière ni les spiritueux.",
+      "answer":false
+    },
+    {
+      "question":"Il faut attendre qu’un chêne-liège ait 40 ans avant d’utiliser son écorce pour fabriquer des bouchons.",
+      "answer":true
+    },
+    {
+      "question":"Dionysos et Bacchus sont tous les deux des dieux du vin.",
+      "answer":true
     }
   ],
   "Sherlock":[
@@ -370,6 +1010,70 @@
     },
     {
       "question":"Sir Arthur Conan Doyle était médecin de formation, comme le personnage de Watson.",
+      "answer":true
+    },
+    {
+      "question":"Le capitaine Arthur Hastings a tenté de ravir la place de Watson comme assistant de Sherlock Holmes.",
+      "answer":false
+    },
+    {
+      "question":"Sherlock Holmes rencontre le docteur Watson pour la première fois après s’être blessé avec son épée dissimulée dans une canne.",
+      "answer":false
+    },
+    {
+      "question":"Le groupe de jeunes de la rue qui aident Sherlock Holmes s’appelle « les Va-nu-pieds ».",
+      "answer":false
+    },
+    {
+      "question":"Sherlock Holmes a été brièvement marié à Irène Adler.",
+      "answer":false
+    },
+    {
+      "question":"Dans les romans d’Arthur Conan Doyle, Sherlock Holmes ne portait pas de casquette de chasseur.",
+      "answer":true
+    },
+    {
+      "question":"Le professeur Moriarty, l’ennemi de Sherlock, est professeur de littérature, de philosophie et d’histoire grecque.",
+      "answer":false
+    },
+    {
+      "question":"L’auteur Arthur Conan Doyle a inventé Baker Street, qui n’existait pas à Londres à l’époque.",
+      "answer":false
+    },
+    {
+      "question":"Le docteur Watson est absent du premier roman mettant en scène Sherlock Holmes.",
+      "answer":false
+    },
+    {
+      "question":"La logeuse de Sherlock Holmes s’appelle Mme Hudson.",
+      "answer":true
+    },
+    {
+      "question":"Sherlock Holmes habite au 212B Baker Street.",
+      "answer":false
+    },
+    {
+      "question":"Sherlock Holmes a précédé les corps policiers dans l’emploi des empreintes digitales.",
+      "answer":true
+    },
+    {
+      "question":"Le docteur Watson se prénomme John G.",
+      "answer":false
+    },
+    {
+      "question":"Le roi Édouard VII a élevé Arthur Conan Doyle au rang de Chevalier de l’Ordre très vénérable de l’Hôpital de Saint-Jean de Jérusalem.",
+      "answer":true
+    },
+    {
+      "question":"Sherlock Holmes a surnommé le professeur Moriarty « le Napoléon du crime ».",
+      "answer":true
+    },
+    {
+      "question":"Mycroft, le frère aîné de Sherlock, possède des aptitudes déductives supérieures à celles de Sherlock.",
+      "answer":true
+    },
+    {
+      "question":"Sherlock Holmes a enquêté sur un cheval meurtrier.",
       "answer":true
     }
   ],
@@ -405,6 +1109,70 @@
     {
       "question":"La première soupe était une soupe d’hippopotame.",
       "answer":true
+    },
+    {
+      "question":"Le sachet de thé a été popularisé par erreur.",
+      "answer":true
+    },
+    {
+      "question":"Les arachides peuvent servir à la fabrication de la dynamite.",
+      "answer":true
+    },
+    {
+      "question":"C’est le comte Sandwich qui est l’inventeur du sandwich.",
+      "answer":true
+    },
+    {
+      "question":"La première soupe était une soupe d’hippopotame.",
+      "answer":true
+    },
+    {
+      "question":"Pour produire 1 kg (2,2 lb) de miel, les abeilles doivent butiner plus de 4 millions de fleurs.",
+      "answer":true
+    },
+    {
+      "question":"Les avocats contiennent très peu de calories.",
+      "answer":false
+    },
+    {
+      "question":"Il faut entre 600 et 800 raisins pour produire une bouteille de vin.",
+      "answer":true
+    },
+    {
+      "question":"Pendant longtemps, il n’y avait pas d’arachides dans la nourriture thaïlandaise.",
+      "answer":true
+    },
+    {
+      "question":"Environ 50 % des oranges servent à la fabrication de jus.",
+      "answer":false
+    },
+    {
+      "question":"Environ 350 000 personnes meurent d’empoisonnement alimentaire chaque année.",
+      "answer":false
+    },
+    {
+      "question":"Le plat indien de poulet Tikka Massala vient de la Grande-Bretagne.",
+      "answer":true
+    },
+    {
+      "question":"Le jus rougeâtre qui sort du steak n’est pas du sang.",
+      "answer":true
+    },
+    {
+      "question":"Christophe Colomb a été le premier à apporter des graines d’oranges en Amérique.",
+      "answer":true
+    },
+    {
+      "question":"La salade César a été nommée en l’honneur de Jules César, très friand de ce plat.",
+      "answer":false
+    },
+    {
+      "question":"Il existe environ 700 variétés de pommes dans le monde.",
+      "answer":false
+    },
+    {
+      "question":"L’arachibutyrophobie désigne la peur du beurre d’arachide.",
+      "answer":true
     }
   ],
   "Dessert":[
@@ -438,6 +1206,70 @@
     },
     {
       "question":"Un des plus grands pâtissiers et chefs de l’histoire s’appelait Carême.",
+      "answer":true
+    },
+    {
+      "question":"Le premier nom connu donné à un gâteau signifie « offrande ».",
+      "answer":true
+    },
+    {
+      "question":"Le cannolo est une création des Italo-Américains de la région de New York.",
+      "answer":false
+    },
+    {
+      "question":"Un pastel de nata est une pâtisserie typique de la cuisine berbère.",
+      "answer":false
+    },
+    {
+      "question":"Le point de fusion du chocolat est légèrement inférieur à la température du corps humain.",
+      "answer":false
+    },
+    {
+      "question":"La cerise est l’un des trois parfums de la tranche napolitaine traditionnelle.",
+      "answer":false
+    },
+    {
+      "question":"Le gâteau forêt-noire a les mêmes couleurs que les habits traditionnels des habitants de la Forêt-Noire.",
+      "answer":true
+    },
+    {
+      "question":"La tarte Tatin a été créée à la suite d’une erreur d’inattention.",
+      "answer":true
+    },
+    {
+      "question":"Le sorbet est un mélange de purée de fruit et de lait écrémé.",
+      "answer":false
+    },
+    {
+      "question":"Le miel peut se conserver plus de 1000 ans.",
+      "answer":true
+    },
+    {
+      "question":"Le mot « dessert » vient du verbe « desservir ».",
+      "answer":true
+    },
+    {
+      "question":"Les gaufres de Liège et de Bruxelles sont identiques.",
+      "answer":false
+    },
+    {
+      "question":"Le gâteau matcha est fait avec de la poudre de pistache.",
+      "answer":false
+    },
+    {
+      "question":"En Amérique latine, le populaire gâteau aux trois laits est fait avec du lait de trois espèces animales différentes.",
+      "answer":false
+    },
+    {
+      "question":"Le nougat nous vient d’Allemagne et d’Autriche.",
+      "answer":false
+    },
+    {
+      "question":"Le nom de la pâte filo vient du grec phyllon qui veut dire « remplir ».",
+      "answer":false
+    },
+    {
+      "question":"Les « fortune cookies » ne sont pas chinois.",
       "answer":true
     }
   ],
@@ -480,6 +1312,70 @@
     },
     {
       "question":"La coupe de Poufsouffle est cachée dans le coffre-fort des Lestrange.",
+      "answer":true
+    },
+    {
+      "question":"Pierre-Alexandre CHOAIN est Albus Perceval Wulfric Brian Dumbledore",
+      "answer":true
+    },
+    {
+      "question":"David BRICENO-AGUILERA est un serpentard",
+      "answer":true
+    },
+    {
+      "question":"L'Université Catholique de Lille est un lieu de tournage pour les Animaux Fantastiques 2 : les crimes de Grindelwald.",
+      "answer":false
+    },
+    {
+      "question":"Milan Fertin est poufsouffle.",
+      "answer":true
+    },
+    {
+      "question":"Celui dont on ne doit pas prononcer le nom est HUGO MROCZKOWSKI.",
+      "answer":false
+    },
+    {
+      "question":"Albus Dumbledore est Gay.",
+      "answer":true
+    },
+    {
+      "question":"Il y a 100 000 exemplaires du coffret prestige Blu-ray Harry Potter.",
+      "answer":false
+    },
+    {
+      "question":"Ron Weasley est le plus jeune garçon de sa fratrie ",
+      "answer":true
+    },
+    {
+      "question":"Padma Patil est la petite soeur de Parvati Patil.",
+      "answer":false
+    },
+    {
+      "question":"Un cracmol est un demi-sorcier.",
+      "answer":false
+    },
+    {
+      "question":"Poufsouffle est une maison de Poudlard dont les élèves sont réputés pour leur loyauté.",
+      "answer":true
+    },
+    {
+      "question":"Ron et Hermione ont été préfets à Poudlard",
+      "answer":true
+    },
+    {
+      "question":"David est un POTTERHEAD.",
+      "answer":true
+    },
+    {
+      "question":"Pansy Parkinson a fait partie de l'armée de Dumbledore",
+      "answer":true
+    },
+    {
+      "question":"Lord Voldemort n'est pas un sorcier de sang pur.",
+      "answer":true
+    },
+    {
+      "question":"Harry ne peut plus parler Fourchelang depuis qu'il n'est plus un horcruxe.",
       "answer":true
     }
   ]
