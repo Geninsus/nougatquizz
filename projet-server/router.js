@@ -39,7 +39,7 @@ router.get('/scores/:count', (req, res, next) => {
   })
 })
 
-router.post('/scores/:name/:theme/:score', (req, res, next) => {
+router.post('/scores/:name/:theme/:score/:count', (req, res, next) => {
   db.addScore(req.params.name, req.params.theme, req.params.score, req.params.count).then((val) => {
     let tmp = {
       'scores': val
