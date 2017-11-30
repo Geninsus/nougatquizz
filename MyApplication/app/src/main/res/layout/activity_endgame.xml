@@ -92,7 +92,7 @@
                 android:layout_marginLeft="30dp"
                 android:inputType="textPersonName"
                 android:gravity="center"
-                android:text="Pseudo"
+                android:text=""
                 android:textStyle="bold|italic"
                 android:textSize="@dimen/question"
                 android:textColor="@color/colorTextePrincipal"/>

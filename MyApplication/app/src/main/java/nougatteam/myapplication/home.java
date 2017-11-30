@@ -1,5 +1,6 @@
 package nougatteam.myapplication;
 
+import android.app.Activity;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -11,7 +12,7 @@ import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
-public class home extends AppCompatActivity {
+public class home extends Activity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

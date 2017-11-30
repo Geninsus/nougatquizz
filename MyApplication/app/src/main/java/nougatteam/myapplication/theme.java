@@ -1,5 +1,6 @@
 package nougatteam.myapplication;
 
+import android.app.Activity;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -18,7 +19,7 @@ import retrofit2.Response;
 import retrofit2.Retrofit;
 import retrofit2.converter.gson.GsonConverterFactory;
 
-public class theme extends AppCompatActivity {
+public class theme extends Activity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

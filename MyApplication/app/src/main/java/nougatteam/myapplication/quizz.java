@@ -1,6 +1,7 @@
 package nougatteam.myapplication;
 
 import android.animation.ObjectAnimator;
+import android.app.Activity;
 import android.content.Intent;
 import android.os.CountDownTimer;
 import android.support.v7.app.AppCompatActivity;
@@ -25,7 +26,7 @@ import retrofit2.Response;
 import retrofit2.Retrofit;
 import retrofit2.converter.gson.GsonConverterFactory;
 
-public class quizz extends AppCompatActivity {
+public class quizz extends Activity {
     private int score = 0;
 
     @Override

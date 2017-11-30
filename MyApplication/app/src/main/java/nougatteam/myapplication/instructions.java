@@ -1,5 +1,6 @@
 package nougatteam.myapplication;
 
+import android.app.Activity;
 import android.content.Intent;
 import android.media.Image;
 import android.support.v7.app.AppCompatActivity;
@@ -9,7 +10,7 @@ import android.view.WindowManager;
 import android.widget.Button;
 import android.widget.ImageView;
 
-public class instructions extends AppCompatActivity {
+public class instructions extends Activity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

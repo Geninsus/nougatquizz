@@ -1,9 +1,13 @@
 package nougatteam.myapplication;
 
+import android.app.Activity;
 import android.content.Intent;
+import android.content.SharedPreferences;
+import android.preference.PreferenceManager;
 import android.support.v4.app.FragmentTransaction;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.text.TextUtils;
 import android.view.View;
 import android.view.WindowManager;
 import android.widget.Button;
@@ -22,7 +26,7 @@ import retrofit2.Response;
 import retrofit2.Retrofit;
 import retrofit2.converter.gson.GsonConverterFactory;
 
-public class endgame extends AppCompatActivity {
+public class endgame extends Activity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -37,29 +41,22 @@ public class endgame extends AppCompatActivity {
         final TextView scoreText = (TextView) findViewById(R.id.score);
         scoreText.setText(""+score);
 
+        EditText mPseudoEditText = (EditText) findViewById(R.id.pseudo);
+
+        SharedPreferences preferences = PreferenceManager.getDefaultSharedPreferences(this);
+        mPseudoEditText.setText(preferences.getString("pseudo", ""));
 
         /* Button Navigation Settings */
         final ImageView homeButton = (ImageView) findViewById(R.id.homeIcon);
         homeButton.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
-                pushInfos(theme, score, true);
-                Intent homeActivity = new Intent(endgame.this, home.class);
-                startActivity(homeActivity);
-                finish();
+                pushInfos(theme, score, "home");
             }
         });
 
         final ImageView settingsButton = (ImageView) findViewById(R.id.settingsIcon);
         settingsButton.setOnClickListener(new View.OnClickListener() {
-            public void onClick(View v) {
-                FragmentTransaction ft = getSupportFragmentManager().beginTransaction();
-                // Replace the contents of the container with the new fragment
-                settingsFragment settingsFragment = new settingsFragment();
-                //ft.add(R.id.fragmentLayout, settingsFragment);
-                // Complete the changes added above
-                ft.commit();
-                onPause();
-            }
+            public void onClick(View v) { }
         });
         /* End Button Navigation */
 
@@ -67,7 +64,7 @@ public class endgame extends AppCompatActivity {
         final Button scores = (Button) findViewById(R.id.scores);
         scores.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
-                pushInfos(theme, score, false);
+                pushInfos(theme, score, "scores");
             }
         });
 
@@ -75,15 +72,20 @@ public class endgame extends AppCompatActivity {
         final Button replay = (Button) findViewById(R.id.restart);
         replay.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
-                pushInfos(theme, score, true);
+                pushInfos(theme, score, "replay");
             }
         });
     }
 
     /* Save score, name and theme into the database */
-    private void pushInfos(String theme, int score, final boolean replay) {
+    private void pushInfos(String theme, int score, final String nextActivity) {
         final EditText textPseudo = (EditText) findViewById(R.id.pseudo);
         final String pseudo = textPseudo.getText().toString();
+        if (TextUtils.isEmpty(textPseudo.getText())){
+            // Display a Toast to the user
+            Toast.makeText(this, "Veuillez entrer un pseudo", Toast.LENGTH_LONG).show();
+            return;
+        }
 
         Retrofit retrofit = new Retrofit.Builder()
                 .baseUrl("http://192.168.43.188:8080/api/")
@@ -96,14 +98,25 @@ public class endgame extends AppCompatActivity {
         scorePojoCall.enqueue(new Callback<GetScoresPojo>() {
             @Override
             public void onResponse(Call<GetScoresPojo> call, Response<GetScoresPojo> response) {
-                if (replay){
-                    Intent themeActivity = new Intent(endgame.this, theme.class);
-                    startActivity(themeActivity);
-                    finish();
-                } else {
-                    Intent scoreActivity = new Intent(endgame.this, score.class);
-                    startActivity(scoreActivity);
-                    finish();
+                SharedPreferences preferences = PreferenceManager.getDefaultSharedPreferences(getApplicationContext());
+                SharedPreferences.Editor editor = preferences.edit();
+                editor.putString("pseudo", pseudo);
+                editor.commit();
+                switch (nextActivity){
+                    case "replay":  Intent themeActivity = new Intent(endgame.this, theme.class);
+                                    startActivity(themeActivity);
+                                    finish();
+                                    break;
+
+                    case "scores":  Intent scoreActivity = new Intent(endgame.this, score.class);
+                                    startActivity(scoreActivity);
+                                    finish();
+                                    break;
+
+                    case "home":    Intent homeActivity = new Intent(endgame.this, home.class);
+                                    startActivity(homeActivity);
+                                    finish();
+                                    break;
                 }
             }
 
