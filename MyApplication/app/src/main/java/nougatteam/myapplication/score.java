@@ -59,7 +59,6 @@ public class score extends Activity {
                 .build();
 
         /* Getting the scores */
-        final ArrayList<ScorePojo> arrayOfScores = new ArrayList<ScorePojo>();
         GameService service = retrofit.create(GameService.class);
         Call<GetScoresPojo> scores = service.getScores(5);
         scores.enqueue(new Callback<GetScoresPojo>() {
