@@ -33,7 +33,7 @@
                 android:layout_weight="3"
                 android:gravity="center"
                 android:textSize="35sp"
-                android:text="Score"
+                android:text="Scores"
                 android:textColor="#EBC153"
                 android:textStyle="bold|italic"></TextView>
 
@@ -71,7 +71,7 @@
                     android:layout_weight="1"
                     android:gravity="center"
                     android:textSize="22sp"
-                    android:text="Rank"
+                    android:text="Rang"
                     android:textColor="#EBC153"
                     android:textStyle="bold|italic"></TextView>
 
@@ -146,7 +146,7 @@
                     android:layout_weight="1"
                     android:gravity="center"
                     android:textSize="22sp"
-                    android:text="Name"
+                    android:text="Pseudo"
                     android:textColor="#EBC153"
                     android:textStyle="bold|italic"></TextView>
 
@@ -221,7 +221,7 @@
                     android:layout_width="match_parent"
                     android:layout_weight="1"
                     android:gravity="center"
-                    android:text="Theme"
+                    android:text="Thème"
                     android:textSize="22sp"
                     android:textColor="@color/colorTextePrincipal"
                     android:textStyle="bold|italic">
@@ -302,7 +302,7 @@
                     android:layout_width="match_parent"
                     android:layout_weight="1"
                     android:gravity="center"
-                    android:text="Point"
+                    android:text="Score"
                     android:textSize="22sp"
                     android:textColor="@color/colorTextePrincipal"
                     android:textStyle="bold|italic">
