@@ -31,6 +31,9 @@ public class score extends Activity {
         getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,
                 WindowManager.LayoutParams.FLAG_FULLSCREEN);
         setContentView(R.layout.activity_score);
+
+
+       /* Button Navigation Settings */
         final ImageView buttonHome = (ImageView) findViewById(R.id.homeIcon);
         buttonHome.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
@@ -40,18 +43,29 @@ public class score extends Activity {
             }
         });
 
+        final ImageView buttonSettings = (ImageView) findViewById(R.id.settingsIcon);
+        buttonSettings.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                /* Implement fragment */
+            }
+        });
+        /* End Button Navigation */
+
+        /* Connection to the DB */
         Retrofit retrofit = new Retrofit.Builder()
                 .baseUrl("http://192.168.1.26:8080/api/")
                 .addConverterFactory(GsonConverterFactory.create())
                 .build();
 
+        /* Getting the scores */
         final ArrayList<ScorePojo> arrayOfScores = new ArrayList<ScorePojo>();
         GameService service = retrofit.create(GameService.class);
-        Call<GetScoresPojo> themes = service.getScores(20);
-        themes.enqueue(new Callback<GetScoresPojo>() {
+        Call<GetScoresPojo> scores = service.getScores(20);
+        scores.enqueue(new Callback<GetScoresPojo>() {
             @Override
             public void onResponse(Call<GetScoresPojo> call, Response<GetScoresPojo> response) {
                 if (response.isSuccessful()) {
+                    /* creating the array with ScorePojo */
                     ScorePojo score = new ScorePojo();
                     for (int i =0; i<20;i++){
                         score.name = response.body().scores[i].name;
@@ -68,14 +82,11 @@ public class score extends Activity {
             }
         });
 
-
+        /* Create adapter with arrayOfScores */
         scoreAdapter adapter = new scoreAdapter(this, arrayOfScores);
         // Attach the adapter to a ListView
         listView = findViewById(R.id.listScore);
         listView.setAdapter(adapter);
-
-
-
 
     }
 }

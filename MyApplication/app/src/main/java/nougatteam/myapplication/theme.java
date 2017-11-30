@@ -26,30 +26,44 @@ public class theme extends AppCompatActivity {
         getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,
                 WindowManager.LayoutParams.FLAG_FULLSCREEN);
         setContentView(R.layout.activity_theme);
-        final ImageView homeIcon = (ImageView) findViewById(R.id.homeIcon);
-        homeIcon.setOnClickListener(new View.OnClickListener() {
-            public void onClick(View view) {
+
+
+        /* Button Navigation Settings */
+        final ImageView buttonHome = (ImageView) findViewById(R.id.homeIcon);
+        buttonHome.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
                 Intent homeActivity = new Intent(theme.this, home.class);
                 startActivity(homeActivity);
                 finish();
             }
         });
 
+        final ImageView buttonSettings = (ImageView) findViewById(R.id.settingsIcon);
+        buttonSettings.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                /* Implement fragment */
+            }
+        });
+        /* End Button Navigation */
+
+        /* Button choose theme */
         final Button buttonTheme1 = (Button) findViewById(R.id.activity_game_theme1_btn);
         final Button buttonTheme2 = (Button) findViewById(R.id.activity_game_theme2_btn);
         final Button buttonTheme3 = (Button) findViewById(R.id.activity_game_theme3_btn);
 
+        /* Connection to DB */
         Retrofit retrofit = new Retrofit.Builder()
                 .baseUrl("http://192.168.1.26:8080/api/")
                 .addConverterFactory(GsonConverterFactory.create())
                 .build();
-
+        /* Getting 3 random themes */
         GameService service = retrofit.create(GameService.class);
         Call<GetThemesPojo> themes = service.getThemes(3);
         themes.enqueue(new Callback<GetThemesPojo>() {
             @Override
             public void onResponse(Call<GetThemesPojo> call, Response<GetThemesPojo> response) {
                 if (response.isSuccessful()) {
+                    /* Setting the theme in the button */
                     buttonTheme1.setText(response.body().themes[0]);
                     buttonTheme2.setText(response.body().themes[1]);
                     buttonTheme3.setText(response.body().themes[2]);
@@ -62,6 +76,7 @@ public class theme extends AppCompatActivity {
             }
         });
 
+        /* Implement action on buttons */
         buttonTheme1.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
                 Intent instructionsActivity = new Intent(theme.this, instructions.class);

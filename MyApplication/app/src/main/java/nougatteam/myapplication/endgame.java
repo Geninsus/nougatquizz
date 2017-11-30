@@ -37,6 +37,8 @@ public class endgame extends AppCompatActivity {
         final TextView scoreText = (TextView) findViewById(R.id.score);
         scoreText.setText(""+score);
 
+
+        /* Button Navigation Settings */
         final ImageView homeButton = (ImageView) findViewById(R.id.homeIcon);
         homeButton.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
@@ -58,7 +60,9 @@ public class endgame extends AppCompatActivity {
                 onPause();
             }
         });
+        /* End Button Navigation */
 
+        /* Go to score button */
         final Button scores = (Button) findViewById(R.id.scores);
         scores.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
@@ -68,9 +72,20 @@ public class endgame extends AppCompatActivity {
                 finish();
             }
         });
+
+        /* Play again button */
+        final Button replay = (Button) findViewById(R.id.restart);
+        replay.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                pushInfos(theme, score);
+                Intent themeActivity = new Intent(endgame.this, theme.class);
+                startActivity(themeActivity);
+                finish();
+            }
+        });
     }
 
-
+    /* Save score, name and theme into the database */
     private void pushInfos(String theme, int score) {
         final EditText textPseudo = (EditText) findViewById(R.id.pseudo);
         final String pseudo = textPseudo.getText().toString();
