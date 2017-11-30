@@ -39,48 +39,50 @@ public class endgame extends AppCompatActivity {
         final Button replay = (Button) findViewById(R.id.restart);
         replay.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
-                pushInfos(theme, score);
-                Intent themeActivity = new Intent(endgame.this, theme.class);
-                startActivity(themeActivity);
-                finish();
+                pushInfos(theme, score, true);
             }
         });
 
         final Button scores = (Button) findViewById(R.id.scores);
         scores.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
-                pushInfos(theme, score);
-                Intent scoreActivity = new Intent(endgame.this, score.class);
-                startActivity(scoreActivity);
-                finish();
+                pushInfos(theme, score, false);
             }
         });
     }
 
 
-    private void pushInfos(String theme, int score) {
+    private void pushInfos(String theme, int score, final boolean replay) {
         final EditText textPseudo = (EditText) findViewById(R.id.pseudo);
         final String pseudo = textPseudo.getText().toString();
 
         Retrofit retrofit = new Retrofit.Builder()
-                .baseUrl("http://192.168.1.26:8080/api/")
+                .baseUrl("http://10.122.15.0:8080/api/")
                 .addConverterFactory(GsonConverterFactory.create())
                 .build();
 
         GameService service = retrofit.create(GameService.class);
 
-        /*Call<ScorePojo> scorePojoCall = service.addScore(pseudo, theme, score);
-        scorePojoCall.enqueue(new Callback<ScorePojo>() {
+        Call<GetScoresPojo> scorePojoCall = service.addScore(pseudo, theme, score, 1);
+        scorePojoCall.enqueue(new Callback<GetScoresPojo>() {
             @Override
-            public void onResponse(Call<ScorePojo> call, Response<ScorePojo> response) {
-                System.out.println("Score envoyé");
+            public void onResponse(Call<GetScoresPojo> call, Response<GetScoresPojo> response) {
+                if (replay){
+                    Intent themeActivity = new Intent(endgame.this, theme.class);
+                    startActivity(themeActivity);
+                    finish();
+                } else {
+                    Intent scoreActivity = new Intent(endgame.this, score.class);
+                    startActivity(scoreActivity);
+                    finish();
+                }
             }
 
             @Override
-            public void onFailure(Call<ScorePojo> call, Throwable t) {
-
+            public void onFailure(Call<GetScoresPojo> call, Throwable t) {
+                System.out.println("ERROR");
             }
-        });*/
+        });
     }
 
 
