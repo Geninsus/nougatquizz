@@ -1,6 +1,7 @@
 package nougatteam.myapplication;
 
 import android.content.Intent;
+import android.support.v4.app.FragmentTransaction;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -36,13 +37,25 @@ public class endgame extends AppCompatActivity {
         final TextView scoreText = (TextView) findViewById(R.id.score);
         scoreText.setText(""+score);
 
-        final Button replay = (Button) findViewById(R.id.restart);
-        replay.setOnClickListener(new View.OnClickListener() {
+        final ImageView homeButton = (ImageView) findViewById(R.id.homeIcon);
+        homeButton.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
-                pushInfos(theme, score);
-                Intent themeActivity = new Intent(endgame.this, theme.class);
-                startActivity(themeActivity);
+                Intent homeActivity = new Intent(endgame.this, home.class);
+                startActivity(homeActivity);
                 finish();
+            }
+        });
+
+        final ImageView settingsButton = (ImageView) findViewById(R.id.settingsIcon);
+        settingsButton.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                FragmentTransaction ft = getSupportFragmentManager().beginTransaction();
+                // Replace the contents of the container with the new fragment
+                settingsFragment settingsFragment = new settingsFragment();
+                //ft.add(R.id.fragmentLayout, settingsFragment);
+                // Complete the changes added above
+                ft.commit();
+                onPause();
             }
         });
 

@@ -1,0 +1,197 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    >
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_height="match_parent"
+        android:layout_width="match_parent">
+
+        <TextView
+            android:layout_weight="1"
+            android:layout_height="0dp"
+            android:layout_width="match_parent">
+
+        </TextView>
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_height="0dp"
+            android:layout_width="match_parent"
+            android:layout_weight="2">
+
+            <TextView
+                android:layout_weight="1"
+                android:layout_height="match_parent"
+                android:layout_width="0dp">
+            </TextView>
+
+            <LinearLayout
+
+                android:orientation="vertical"
+                android:layout_height="match_parent"
+                android:layout_width="0dp"
+                android:layout_weight="2"
+                android:gravity="center"
+                android:background="#09475C">
+
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_weight="2"
+                    android:layout_height="0dp"
+                    android:layout_width="match_parent">
+
+                    <TextView
+                        android:layout_weight="4"
+                        android:layout_height="match_parent"
+                        android:layout_width="0dp">
+
+                    </TextView>
+
+                    <TextView
+                        android:id="@+id/close"
+                        android:layout_weight="1"
+                        android:layout_height="match_parent"
+                        android:layout_width="0dp"
+                        android:text="x"
+                        android:textAlignment="center"
+                        android:textSize="20sp"
+                        android:textColor="#EBC153"
+                        android:textStyle="bold|italic">
+
+                    </TextView>
+
+                </LinearLayout>
+
+
+
+                <LinearLayout
+                    android:layout_height="0dp"
+                    android:layout_width="match_parent"
+                    android:layout_weight="9"
+                    android:paddingLeft="5sp"
+                    android:paddingRight="5sp">
+
+                    <LinearLayout
+                        android:orientation="vertical"
+                        android:layout_height="match_parent"
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:paddingLeft="10dp">
+
+                        <ImageView
+                            android:id="@+id/musicIcon"
+                            android:layout_gravity="center"
+                            android:src="@drawable/music_player"
+                            android:layout_column="0"
+                            android:layout_row="0"
+                            android:layout_height="0dp"
+                            android:layout_width="match_parent"
+                            android:layout_weight="1">
+                        </ImageView>
+
+                        <ImageView
+                            android:id="@+id/soundIcon"
+                            android:layout_gravity="center"
+                            android:src="@drawable/volume_off"
+                            android:layout_height="0dp"
+                            android:layout_width="match_parent"
+                            android:layout_weight="1">
+                        </ImageView>
+
+                    </LinearLayout>
+                    <LinearLayout
+                        android:orientation="vertical"
+                        android:layout_height="match_parent"
+                        android:layout_width="0dp"
+                        android:layout_weight="3">
+
+                        <TextView
+                            android:text="Music"
+                            android:layout_gravity="center"
+                            android:gravity="center"
+                            android:textSize=""
+                            android:textColor="#EBC153"
+                            android:textStyle="bold|italic"
+                            android:layout_height="0dp"
+                            android:layout_width="match_parent"
+                            android:layout_weight="1">
+                        </TextView>
+
+                        <TextView
+                            android:text="Volume"
+                            android:layout_gravity="center"
+                            android:gravity="center"
+                            android:textSize=""
+                            android:textColor="#EBC153"
+                            android:textStyle="bold|italic"
+                            android:layout_height="0dp"
+                            android:layout_width="match_parent"
+                            android:layout_weight="1">
+                        </TextView>
+
+
+
+
+                    </LinearLayout>
+                    <LinearLayout
+                        android:orientation="vertical"
+                        android:layout_height="match_parent"
+                        android:layout_width="0dp"
+                        android:layout_weight="2">
+
+                        <TextView
+                            android:id="@+id/musicOnOff"
+                            android:layout_gravity="center"
+                            android:gravity="center"
+                            android:textSize="35sp"
+                            android:textColor="#EBC153"
+                            android:textStyle="bold|italic"
+                            android:layout_height="0dp"
+                            android:layout_width="match_parent"
+                            android:layout_weight="1">
+                        </TextView>
+
+                        <TextView
+                            android:id="@+id/volumeOnOff"
+                            android:layout_gravity="center"
+                            android:gravity="center"
+                            android:textSize="35sp"
+                            android:textColor="#EBC153"
+                            android:textStyle="bold|italic"
+                            android:layout_height="0dp"
+                            android:layout_width="match_parent"
+                            android:layout_weight="1">
+                        </TextView>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+            </LinearLayout>
+
+            <TextView
+                android:layout_weight="1"
+                android:layout_height="match_parent"
+                android:layout_width="0dp">
+            </TextView>
+        </LinearLayout>
+        <TextView
+            android:layout_weight="1"
+            android:layout_height="0dp"
+            android:layout_width="match_parent">
+
+        </TextView>
+
+    </LinearLayout>
+
+
+
+
+
+
+
+</LinearLayout>
