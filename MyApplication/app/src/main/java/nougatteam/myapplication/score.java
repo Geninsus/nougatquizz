@@ -53,7 +53,7 @@ public class score extends Activity {
 
         /* Connection to the DB */
         Retrofit retrofit = new Retrofit.Builder()
-                .baseUrl("http://10.122.15.0:8080/api/")
+                .baseUrl("http://192.168.43.188:8080/api/")
                 .addConverterFactory(GsonConverterFactory.create())
                 .build();
 
@@ -67,11 +67,13 @@ public class score extends Activity {
                 if (response.isSuccessful()) {
                     /* creating the array with ScorePojo */
                     ScorePojo score = new ScorePojo();
-                    for (int i =0; i<20;i++){
+                    int i = 0;
+                    while(i <= response.body().scores.length-1){
                         score.name = response.body().scores[i].name;
                         score.theme = response.body().scores[i].theme;
                         score.name = response.body().scores[i].name;
                         arrayOfScores.add(score);
+                        i++;
                     }
                 }
             }

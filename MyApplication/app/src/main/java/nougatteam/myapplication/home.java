@@ -30,7 +30,7 @@ public class home extends AppCompatActivity {
             }
         });
         final ImageView buttonSettings = (ImageView) findViewById(R.id.settingsIcon);
-        buttonScore.setOnClickListener(new View.OnClickListener() {
+        buttonSettings.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
                 /* Implement fragment */
             }
