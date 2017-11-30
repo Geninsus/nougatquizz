@@ -57,9 +57,9 @@ public class quizz extends AppCompatActivity {
         /* End Button Navigation */
 
         /* Set the game duration */
-        final int quizzDuration = 10000;
+        final int quizzDuration = 60000;
 
-        /* Get the theme choosen */
+        /* Get the theme chosen */
         Intent myIntent = getIntent();
         final String theme = myIntent.getStringExtra("theme");
 
