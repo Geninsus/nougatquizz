@@ -53,7 +53,7 @@ public class score extends Activity {
 
         /* Connection to the DB */
         Retrofit retrofit = new Retrofit.Builder()
-                .baseUrl("http://192.168.1.26:8080/api/")
+                .baseUrl("http://10.122.15.0:8080/api/")
                 .addConverterFactory(GsonConverterFactory.create())
                 .build();
 

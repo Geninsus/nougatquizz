@@ -35,6 +35,11 @@ public class quizz extends AppCompatActivity {
                 WindowManager.LayoutParams.FLAG_FULLSCREEN);
         setContentView(R.layout.activity_quizz);
 
+        Retrofit retrofit = new Retrofit.Builder()
+                .baseUrl("http://10.122.15.0:8080/api/")
+                .addConverterFactory(GsonConverterFactory.create())
+                .build();
+
         /* Button Navigation Settings */
         final ImageView buttonPause = (ImageView) findViewById(R.id.pauseIcon);
         buttonPause.setOnClickListener(new View.OnClickListener() {
@@ -61,12 +66,6 @@ public class quizz extends AppCompatActivity {
         /* Initiate the score to zero */
         final TextView scoreText = (TextView) findViewById(R.id.scoreLeft);
         scoreText.setText("Score : " + score);
-
-        /* Initiate DB connection */
-        Retrofit retrofit = new Retrofit.Builder()
-                .baseUrl("http://192.168.1.26:8080/api/")
-                .addConverterFactory(GsonConverterFactory.create())
-                .build();
 
         GameService service = retrofit.create(GameService.class);
         /* Get Questions by theme */
