@@ -9,6 +9,7 @@ import android.view.WindowManager;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.ListView;
+import android.widget.TextView;
 
 import java.util.ArrayList;
 
@@ -66,18 +67,43 @@ public class score extends Activity {
             public void onResponse(Call<GetScoresPojo> call, Response<GetScoresPojo> response) {
                 if (response.isSuccessful()) {
                     /* creating the array with ScorePojo */
-                    ScorePojo score = new ScorePojo();
-                    int i = 0;
-                    while (i <= response.body().scores.length-1){
-                        score.name = response.body().scores[i].name;
-                        System.out.println(score.name);
-                        score.theme = response.body().scores[i].theme;
-                        System.out.println(score.theme);
-                        score.score = response.body().scores[i].score;
-                        System.out.println(score.score);
-                        arrayOfScores.add(score);
-                        i++;
-                    }
+                    TextView pseudoText = findViewById(R.id.firstPseudo);
+                    pseudoText.setText(response.body().scores[0].name);
+                    TextView themeText = findViewById(R.id.firstTheme);
+                    themeText.setText(response.body().scores[0].theme);
+                    TextView scoreText = findViewById(R.id.firstPoint);
+                    scoreText.setText(response.body().scores[0].score);
+
+                    pseudoText = findViewById(R.id.secondPseudo);
+                    pseudoText.setText(response.body().scores[1].name);
+                    themeText = findViewById(R.id.secondTheme);
+                    themeText.setText(response.body().scores[1].theme);
+                    scoreText = findViewById(R.id.secondPoint);
+                    scoreText.setText(response.body().scores[1].score);
+
+                    pseudoText = findViewById(R.id.thirdPseudo);
+                    pseudoText.setText(response.body().scores[2].name);
+                    themeText = findViewById(R.id.thirdTheme);
+                    themeText.setText(response.body().scores[2].theme);
+                    scoreText = findViewById(R.id.thirdPoint);
+                    scoreText.setText(response.body().scores[2].score);
+
+
+                    pseudoText = findViewById(R.id.forthPseudo);
+                    pseudoText.setText(response.body().scores[3].name);
+                    themeText = findViewById(R.id.forthTheme);
+                    themeText.setText(response.body().scores[3].theme);
+                    scoreText = findViewById(R.id.forthPoint);
+                    scoreText.setText(response.body().scores[3].score);
+
+
+                    pseudoText = findViewById(R.id.fifthPseudo);
+                    pseudoText.setText(response.body().scores[4].name);
+                    themeText = findViewById(R.id.fifthTheme);
+                    themeText.setText(response.body().scores[4].theme);
+                    scoreText = findViewById(R.id.fifthPoint);
+                    scoreText.setText(response.body().scores[4].score);
+
                 }
             }
 
