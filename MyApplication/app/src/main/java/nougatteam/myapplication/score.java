@@ -72,21 +72,21 @@ public class score extends Activity {
                     TextView themeText = findViewById(R.id.firstTheme);
                     themeText.setText(response.body().scores[0].theme);
                     TextView scoreText = findViewById(R.id.firstPoint);
-                    scoreText.setText(response.body().scores[0].score);
+                    scoreText.setText(""+response.body().scores[0].score);
 
                     pseudoText = findViewById(R.id.secondPseudo);
                     pseudoText.setText(response.body().scores[1].name);
                     themeText = findViewById(R.id.secondTheme);
                     themeText.setText(response.body().scores[1].theme);
                     scoreText = findViewById(R.id.secondPoint);
-                    scoreText.setText(response.body().scores[1].score);
+                    scoreText.setText(""+response.body().scores[1].score);
 
                     pseudoText = findViewById(R.id.thirdPseudo);
                     pseudoText.setText(response.body().scores[2].name);
                     themeText = findViewById(R.id.thirdTheme);
                     themeText.setText(response.body().scores[2].theme);
                     scoreText = findViewById(R.id.thirdPoint);
-                    scoreText.setText(response.body().scores[2].score);
+                    scoreText.setText(""+response.body().scores[2].score);
 
 
                     pseudoText = findViewById(R.id.forthPseudo);
@@ -94,7 +94,7 @@ public class score extends Activity {
                     themeText = findViewById(R.id.forthTheme);
                     themeText.setText(response.body().scores[3].theme);
                     scoreText = findViewById(R.id.forthPoint);
-                    scoreText.setText(response.body().scores[3].score);
+                    scoreText.setText(""+response.body().scores[3].score);
 
 
                     pseudoText = findViewById(R.id.fifthPseudo);
@@ -102,7 +102,7 @@ public class score extends Activity {
                     themeText = findViewById(R.id.fifthTheme);
                     themeText.setText(response.body().scores[4].theme);
                     scoreText = findViewById(R.id.fifthPoint);
-                    scoreText.setText(response.body().scores[4].score);
+                    scoreText.setText(""+response.body().scores[4].score);
 
                 }
             }
@@ -112,12 +112,6 @@ public class score extends Activity {
                 System.out.println("ERROR");
             }
         });
-
-        /* Create adapter with arrayOfScores */
-        scoreAdapter adapter = new scoreAdapter(this, arrayOfScores);
-        // Attach the adapter to a ListView
-        listView = findViewById(R.id.listScore);
-        listView.setAdapter(adapter);
 
     }
 }
