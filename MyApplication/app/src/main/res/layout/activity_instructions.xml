@@ -63,7 +63,7 @@
                 android:paddingLeft="10dp"
                 android:paddingRight="10dp"
 
-                android:text="@string/instructions"
+                android:text="Répondez à un maximum de question en"
                 android:textStyle="bold|italic"
                 android:textColor="@color/colorTextePrincipal"
                 android:textAlignment="center"
