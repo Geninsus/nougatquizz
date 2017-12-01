@@ -67,42 +67,50 @@ public class score extends Activity {
                 if (response.isSuccessful()) {
                     /* creating the array with ScorePojo */
                     TextView pseudoText = findViewById(R.id.firstPseudo);
-                    pseudoText.setText(response.body().scores[0].name);
                     TextView themeText = findViewById(R.id.firstTheme);
-                    themeText.setText(response.body().scores[0].theme);
                     TextView scoreText = findViewById(R.id.firstPoint);
-                    scoreText.setText(""+response.body().scores[0].score);
 
-                    pseudoText = findViewById(R.id.secondPseudo);
-                    pseudoText.setText(response.body().scores[1].name);
-                    themeText = findViewById(R.id.secondTheme);
-                    themeText.setText(response.body().scores[1].theme);
-                    scoreText = findViewById(R.id.secondPoint);
-                    scoreText.setText(""+response.body().scores[1].score);
+                    if (response.body().scores.length >= 1){
+                        pseudoText.setText(response.body().scores[0].name);
+                        themeText.setText(response.body().scores[0].theme);
+                        scoreText.setText(""+response.body().scores[0].score);
+                    }
 
-                    pseudoText = findViewById(R.id.thirdPseudo);
-                    pseudoText.setText(response.body().scores[2].name);
-                    themeText = findViewById(R.id.thirdTheme);
-                    themeText.setText(response.body().scores[2].theme);
-                    scoreText = findViewById(R.id.thirdPoint);
-                    scoreText.setText(""+response.body().scores[2].score);
+                    if (response.body().scores.length >= 2){
+                        pseudoText = findViewById(R.id.secondPseudo);
+                        pseudoText.setText(response.body().scores[1].name);
+                        themeText = findViewById(R.id.secondTheme);
+                        themeText.setText(response.body().scores[1].theme);
+                        scoreText = findViewById(R.id.secondPoint);
+                        scoreText.setText(""+response.body().scores[1].score);
+                    }
 
+                    if (response.body().scores.length >= 3) {
+                        pseudoText = findViewById(R.id.thirdPseudo);
+                        pseudoText.setText(response.body().scores[2].name);
+                        themeText = findViewById(R.id.thirdTheme);
+                        themeText.setText(response.body().scores[2].theme);
+                        scoreText = findViewById(R.id.thirdPoint);
+                        scoreText.setText("" + response.body().scores[2].score);
+                    }
 
-                    pseudoText = findViewById(R.id.forthPseudo);
-                    pseudoText.setText(response.body().scores[3].name);
-                    themeText = findViewById(R.id.forthTheme);
-                    themeText.setText(response.body().scores[3].theme);
-                    scoreText = findViewById(R.id.forthPoint);
-                    scoreText.setText(""+response.body().scores[3].score);
+                    if (response.body().scores.length >= 4) {
+                        pseudoText = findViewById(R.id.forthPseudo);
+                        pseudoText.setText(response.body().scores[3].name);
+                        themeText = findViewById(R.id.forthTheme);
+                        themeText.setText(response.body().scores[3].theme);
+                        scoreText = findViewById(R.id.forthPoint);
+                        scoreText.setText("" + response.body().scores[3].score);
+                    }
 
-
-                    pseudoText = findViewById(R.id.fifthPseudo);
-                    pseudoText.setText(response.body().scores[4].name);
-                    themeText = findViewById(R.id.fifthTheme);
-                    themeText.setText(response.body().scores[4].theme);
-                    scoreText = findViewById(R.id.fifthPoint);
-                    scoreText.setText(""+response.body().scores[4].score);
-
+                    if (response.body().scores.length >= 5) {
+                        pseudoText = findViewById(R.id.fifthPseudo);
+                        pseudoText.setText(response.body().scores[4].name);
+                        themeText = findViewById(R.id.fifthTheme);
+                        themeText.setText(response.body().scores[4].theme);
+                        scoreText = findViewById(R.id.fifthPoint);
+                        scoreText.setText("" + response.body().scores[4].score);
+                    }
                 }
             }
 
