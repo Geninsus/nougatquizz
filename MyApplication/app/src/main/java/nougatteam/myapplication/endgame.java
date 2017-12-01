@@ -20,6 +20,7 @@ import nougatteam.myapplication.interfaces.GameService;
 import nougatteam.myapplication.pojo.GetScoresPojo;
 import nougatteam.myapplication.pojo.GetThemesPojo;
 import nougatteam.myapplication.pojo.ScorePojo;
+import nougatteam.myapplication.statics.Generals;
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
@@ -88,7 +89,7 @@ public class endgame extends Activity {
         }
 
         Retrofit retrofit = new Retrofit.Builder()
-                .baseUrl("http://192.168.43.188:8080/api/")
+                .baseUrl(Generals.API_ENDPOINT)
                 .addConverterFactory(GsonConverterFactory.create())
                 .build();
 

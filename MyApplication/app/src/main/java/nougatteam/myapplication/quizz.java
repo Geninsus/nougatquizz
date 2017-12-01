@@ -20,6 +20,7 @@ import org.w3c.dom.Text;
 import nougatteam.myapplication.interfaces.GameService;
 import nougatteam.myapplication.pojo.GetQuestionsPojo;
 import nougatteam.myapplication.pojo.QuestionPojo;
+import nougatteam.myapplication.statics.Generals;
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
@@ -37,7 +38,7 @@ public class quizz extends Activity {
         setContentView(R.layout.activity_quizz);
 
         Retrofit retrofit = new Retrofit.Builder()
-                .baseUrl("http://192.168.43.188:8080/api/")
+                .baseUrl(Generals.API_ENDPOINT)
                 .addConverterFactory(GsonConverterFactory.create())
                 .build();
 

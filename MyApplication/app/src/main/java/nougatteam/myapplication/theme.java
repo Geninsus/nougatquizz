@@ -13,6 +13,7 @@ import android.widget.TextView;
 import nougatteam.myapplication.interfaces.GameService;
 import nougatteam.myapplication.pojo.GetQuestionsPojo;
 import nougatteam.myapplication.pojo.GetThemesPojo;
+import nougatteam.myapplication.statics.Generals;
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
@@ -54,7 +55,7 @@ public class theme extends Activity {
 
         /* Connection to DB */
         Retrofit retrofit = new Retrofit.Builder()
-                .baseUrl("http://192.168.43.188:8080/api/")
+                .baseUrl(Generals.API_ENDPOINT)
                 .addConverterFactory(GsonConverterFactory.create())
                 .build();
         /* Getting 3 random themes */
