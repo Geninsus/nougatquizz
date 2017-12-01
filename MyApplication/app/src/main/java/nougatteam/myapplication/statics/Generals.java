@@ -5,5 +5,5 @@ package nougatteam.myapplication.statics;
  */
 
 public class Generals {
-    public static final String API_ENDPOINT = "http://192.168.43.188:8080/api/";
+    public static final String API_ENDPOINT = "http://10.122.7.40:8080/api/";
 }

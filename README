@@ -1,0 +1,13 @@
+ETAPE 1 :
+Configuration du serveur NodeJS
+Node >= 8 requis
+Se place (via terminal) dans le dossier .../projet-server
+Intaller les dépendances : npm install
+Démarrer le serveur : node index.js
+
+ETAPE 2 :
+Configuration de l'application
+Il faut saisir l'URL de l'API dans .../Statics/Generals.java
+
+ETAPE 3 :
+S'amuser
