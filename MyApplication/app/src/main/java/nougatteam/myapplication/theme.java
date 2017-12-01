@@ -69,40 +69,40 @@ public class theme extends Activity {
                     buttonTheme1.setText(response.body().themes[0]);
                     buttonTheme2.setText(response.body().themes[1]);
                     buttonTheme3.setText(response.body().themes[2]);
+
+                    /* Implement action on buttons */
+                    buttonTheme1.setOnClickListener(new View.OnClickListener() {
+                        public void onClick(View v) {
+                            Intent instructionsActivity = new Intent(theme.this, instructions.class);
+                            instructionsActivity.putExtra("theme", buttonTheme1.getText().toString());
+                            startActivity(instructionsActivity);
+                            finish();
+                        }
+                    });
+
+                    buttonTheme2.setOnClickListener(new View.OnClickListener() {
+                        public void onClick(View v) {
+                            Intent instructionsActivity = new Intent(theme.this, instructions.class);
+                            instructionsActivity.putExtra("theme", buttonTheme2.getText().toString());
+                            startActivity(instructionsActivity);
+                            finish();
+                        }
+                    });
+
+                    buttonTheme3.setOnClickListener(new View.OnClickListener() {
+                        public void onClick(View v) {
+                            Intent instructionsActivity = new Intent(theme.this, instructions.class);
+                            instructionsActivity.putExtra("theme", buttonTheme3.getText().toString());
+                            startActivity(instructionsActivity);
+                            finish();
+                        }
+                    });
                 }
             }
 
             @Override
             public void onFailure(Call<GetThemesPojo> call, Throwable t) {
                 System.out.println("ERROR");
-            }
-        });
-
-        /* Implement action on buttons */
-        buttonTheme1.setOnClickListener(new View.OnClickListener() {
-            public void onClick(View v) {
-                Intent instructionsActivity = new Intent(theme.this, instructions.class);
-                instructionsActivity.putExtra("theme", buttonTheme1.getText().toString());
-                startActivity(instructionsActivity);
-                finish();
-            }
-        });
-
-        buttonTheme2.setOnClickListener(new View.OnClickListener() {
-            public void onClick(View v) {
-                Intent instructionsActivity = new Intent(theme.this, instructions.class);
-                instructionsActivity.putExtra("theme", buttonTheme2.getText().toString());
-                startActivity(instructionsActivity);
-                finish();
-            }
-        });
-
-        buttonTheme3.setOnClickListener(new View.OnClickListener() {
-            public void onClick(View v) {
-                Intent instructionsActivity = new Intent(theme.this, instructions.class);
-                instructionsActivity.putExtra("theme", buttonTheme3.getText().toString());
-                startActivity(instructionsActivity);
-                finish();
             }
         });
     }
